@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sprachstil-Guide — Claudia Thonet</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --anthrazit:    #333a45;
+      --tuerkis:      #14b4be;
+      --orange:       #fc551e;
+      --anthrazit-80: #5c626a;
+      --tuerkis-50:   #8adadf;
+      --bg:           #f7f8f9;
+      --border:       #dde0e4;
+      --white:        #ffffff;
+    }
+
+    body {
+      font-family: 'Basier Circle', Arial, sans-serif;
+      font-size: 16px;
+      background: var(--bg);
+      color: var(--anthrazit);
+      line-height: 1.7;
+    }
+
+    /* ── Header ── */
+    .hero {
+      background: var(--orange);
+      padding: 56px 48px;
+    }
+
+    .hero-inner { max-width: 800px; margin: 0 auto; }
+
+    .hero-back {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 24px;
+    }
+
+    .hero-back:hover { color: white; }
+
+    .hero-eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 12px;
+    }
+
+    .hero-title {
+      font-size: 44px;
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    .hero-sub {
+      font-size: 18px;
+      color: rgba(255,255,255,0.75);
+      max-width: 500px;
+    }
+
+    /* ── Main ── */
+    .main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 56px 48px 80px;
+    }
+
+    /* ── Sections ── */
+    .ds-section {
+      margin-bottom: 60px;
+      scroll-margin-top: 32px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--tuerkis);
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-size: 28px;
+      font-weight: 600;
+      color: var(--anthrazit);
+      margin-bottom: 8px;
+    }
+
+    .section-intro {
+      font-size: 16px;
+      color: var(--anthrazit-80);
+      margin-bottom: 28px;
+      max-width: 620px;
+    }
+
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin-bottom: 28px;
+    }
+
+    /* ── Voice adjectives ── */
+    .voice-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+    }
+
+    .voice-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    .voice-card-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--anthrazit);
+      margin-bottom: 6px;
+    }
+
+    .voice-card-not {
+      font-size: 12px;
+      color: #b0b5bd;
+      margin-bottom: 8px;
+    }
+
+    .voice-card-not span {
+      text-decoration: line-through;
+    }
+
+    .voice-card-desc {
+      font-size: 13px;
+      color: var(--anthrazit-80);
+      line-height: 1.5;
+    }
+
+    /* ── Principles ── */
+    .principle {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 24px 28px;
+      margin-bottom: 12px;
+      display: grid;
+      grid-template-columns: 40px 1fr;
+      gap: 16px;
+      align-items: start;
+    }
+
+    .principle-num {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--tuerkis);
+      line-height: 1;
+    }
+
+    .principle-title {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--anthrazit);
+      margin-bottom: 6px;
+    }
+
+    .principle-desc {
+      font-size: 14px;
+      color: var(--anthrazit-80);
+      line-height: 1.6;
+    }
+
+    /* ── Do / Don't examples ── */
+    .example-pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .ex-do, .ex-dont {
+      border-radius: 10px;
+      padding: 18px 20px;
+    }
+
+    .ex-do {
+      background: #f0fafb;
+      border: 1px solid #b8e8eb;
+    }
+
+    .ex-dont {
+      background: #fff5f0;
+      border: 1px solid #f5c4b4;
+    }
+
+    .ex-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .ex-do   .ex-label { color: #0a8a93; }
+    .ex-dont .ex-label { color: #c94010; }
+
+    .ex-text {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--anthrazit);
+    }
+
+    .ex-note {
+      font-size: 12px;
+      color: var(--anthrazit-80);
+      margin-top: 8px;
+      font-style: italic;
+    }
+
+    /* ── Vocabulary table ── */
+    .vocab-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--white);
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      font-size: 14px;
+    }
+
+    .vocab-table th {
+      text-align: left;
+      background: #eef0f2;
+      padding: 10px 18px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--anthrazit-80);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .vocab-table td {
+      padding: 12px 18px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    .vocab-table tr:last-child td { border-bottom: none; }
+
+    .word-use   { color: var(--anthrazit); font-weight: 500; }
+    .word-avoid { color: #b0b5bd; text-decoration: line-through; }
+    .word-note  { color: var(--anthrazit-80); font-size: 13px; }
+
+    /* ── Anrede box ── */
+    .anrede-box {
+      background: var(--anthrazit);
+      border-radius: 12px;
+      padding: 28px 32px;
+      color: var(--white);
+    }
+
+    .anrede-box h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: var(--tuerkis-50);
+    }
+
+    .anrede-box p {
+      font-size: 15px;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.7;
+      max-width: 560px;
+    }
+
+    .anrede-box p + p { margin-top: 12px; }
+
+    .anrede-box strong { color: var(--white); }
+
+    /* ── Tone scale ── */
+    .tone-scale {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 24px 28px;
+    }
+
+    .tone-bar-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: var(--anthrazit-80);
+      margin-bottom: 8px;
+    }
+
+    .tone-bar {
+      height: 8px;
+      border-radius: 4px;
+      background: linear-gradient(to right, #eef0f2, var(--tuerkis));
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .tone-marker {
+      position: absolute;
+      top: -4px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--anthrazit);
+      border: 2px solid var(--white);
+      box-shadow: 0 0 0 2px var(--anthrazit);
+    }
+
+    .tone-rows { display: flex; flex-direction: column; gap: 16px; }
+
+    .tone-row {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .tone-row-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--anthrazit);
+    }
+
+    /* ── Checklist ── */
+    .checklist {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      color: var(--anthrazit);
+    }
+
+    .check-item:last-child { border-bottom: none; }
+
+    .check-icon {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .check-icon.yes { background: #d8f3f5; color: var(--tuerkis); font-weight: 700; }
+    .check-icon.no  { background: #ffe8e0; color: var(--orange);  font-weight: 700; }
+
+    /* ── Quote example ── */
+    .quote-block {
+      border-left: 3px solid var(--tuerkis);
+      padding: 12px 20px;
+      background: var(--white);
+      border-radius: 0 10px 10px 0;
+      margin: 20px 0;
+      font-size: 15px;
+      color: var(--anthrazit);
+      line-height: 1.7;
+    }
+
+    .quote-block cite {
+      display: block;
+      font-size: 12px;
+      color: var(--anthrazit-80);
+      margin-top: 8px;
+      font-style: normal;
+    }
+
+    /* ── nav ── */
+    .sticky-nav {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 0 48px;
+      display: flex;
+      gap: 24px;
+      overflow-x: auto;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .sticky-nav a {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--anthrazit-80);
+      text-decoration: none;
+      padding: 14px 0;
+      border-bottom: 2px solid transparent;
+      white-space: nowrap;
+      transition: all 0.15s;
+    }
+
+    .sticky-nav a:hover {
+      color: var(--tuerkis);
+      border-bottom-color: var(--tuerkis);
+    }
+
+    @media (max-width: 600px) {
+      .hero  { padding: 40px 24px; }
+      .main  { padding: 40px 24px 60px; }
+      .sticky-nav { padding: 0 24px; }
+      .example-pair { grid-template-columns: 1fr; }
+      .hero-title   { font-size: 32px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-inner">
+    <a class="hero-back" href="index.html">← Zurück zum Design System</a>
+    <div class="hero-eyebrow">Claudia Thonet Agile Consulting GmbH</div>
+    <h1 class="hero-title">Sprachstil-Guide</h1>
+    <p class="hero-sub">Wie wir schreiben, sprechen und kommunizieren — damit die Marke überall wie aus einem Guss klingt.</p>
+  </div>
+</header>
+
+<!-- NAV -->
+<nav class="sticky-nav">
+  <a href="#stimme">Markenstimme</a>
+  <a href="#prinzipien">Prinzipien</a>
+  <a href="#anrede">Anrede</a>
+  <a href="#tonalitaet">Tonalität</a>
+  <a href="#beispiele">Beispiele</a>
+  <a href="#vokabular">Vokabular</a>
+  <a href="#checkliste">Checkliste</a>
+</nav>
+
+<main class="main">
+
+  <!-- ── 1. MARKENSTIMME ──────────────────────────────────── -->
+  <section class="ds-section" id="stimme">
+    <div class="section-label">01 — Markenstimme</div>
+    <h2 class="section-title">Wie klingt Claudia Thonet?</h2>
+    <p class="section-intro">Die Stimme der Marke ist konstant — egal ob Website, E-Book, Social Post oder Workshop-Material. Vier Adjektivpaare beschreiben sie:</p>
+    <div class="divider"></div>
+
+    <div class="voice-grid">
+      <div class="voice-card">
+        <div class="voice-card-title">Kompetent</div>
+        <div class="voice-card-not">nicht: <span>arrogant</span></div>
+        <div class="voice-card-desc">Wir zeigen echtes Fachwissen — ohne es zu zeigen. Keine Imponiererei, keine Fachbegriffe ohne Mehrwert.</div>
+      </div>
+      <div class="voice-card">
+        <div class="voice-card-title">Klar</div>
+        <div class="voice-card-not">nicht: <span>vereinfachend</span></div>
+        <div class="voice-card-desc">Wir bringen Komplexes auf den Punkt — ohne es zu verharmlosen. Direkt, strukturiert, verständlich.</div>
+      </div>
+      <div class="voice-card">
+        <div class="voice-card-title">Menschlich</div>
+        <div class="voice-card-not">nicht: <span>kumpelhaft</span></div>
+        <div class="voice-card-desc">Wir sind auf Augenhöhe — persönlich, empathisch und echt. Aber professionell und verbindlich.</div>
+      </div>
+      <div class="voice-card">
+        <div class="voice-card-title">Dynamisch</div>
+        <div class="voice-card-not">nicht: <span>hektisch</span></div>
+        <div class="voice-card-desc">Wir bewegen uns und bewegen andere. Unsere Sprache hat Energie und Richtung — ohne Druck.</div>
+      </div>
+      <div class="voice-card">
+        <div class="voice-card-title">Ermutigend</div>
+        <div class="voice-card-not">nicht: <span>aufgesetzt positiv</span></div>
+        <div class="voice-card-desc">Wir glauben daran, dass Veränderung möglich ist. Das zeigt sich in unserem Ton — nicht in leeren Phrasen.</div>
+      </div>
+      <div class="voice-card">
+        <div class="voice-card-title">Präzise</div>
+        <div class="voice-card-not">nicht: <span>steif</span></div>
+        <div class="voice-card-desc">Wir wählen Worte bewusst. Kein Fülltext, keine Redundanz. Jeder Satz hat einen Grund.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 2. SCHREIBPRINZIPIEN ─────────────────────────────── -->
+  <section class="ds-section" id="prinzipien">
+    <div class="section-label">02 — Schreibprinzipien</div>
+    <h2 class="section-title">Wie wir schreiben</h2>
+    <p class="section-intro">Diese Prinzipien gelten für alle Texte — Website, Social Media, E-Books, Kursunterlagen, E-Mails.</p>
+    <div class="divider"></div>
+
+    <div class="principle">
+      <div class="principle-num">1</div>
+      <div>
+        <div class="principle-title">Aktiv statt passiv</div>
+        <div class="principle-desc">Wir handeln, wir gestalten, wir begleiten. Passivsätze nehmen der Sprache Energie und verstecken, wer etwas tut. Wenn kein Subjekt klar ist, neu formulieren.</div>
+      </div>
+    </div>
+
+    <div class="principle">
+      <div class="principle-num">2</div>
+      <div>
+        <div class="principle-title">Nutzen vor Methode</div>
+        <div class="principle-desc">Nicht: „Im Workshop lernen Sie Scrum-Techniken kennen." Sondern: „Nach dem Workshop führen Sie Ihr Team souverän durch komplexe Projekte." Der Leser fragt immer: Was hab ich davon?</div>
+      </div>
+    </div>
+
+    <div class="principle">
+      <div class="principle-num">3</div>
+      <div>
+        <div class="principle-title">Konkret statt abstrakt</div>
+        <div class="principle-desc">„Agile Transformation" sagt wenig. „Vom Silodenken zur cross-funktionalen Zusammenarbeit in 6 Monaten" sagt viel. Wir erden Begriffe mit Bildern, Beispielen, Zahlen.</div>
+      </div>
+    </div>
+
+    <div class="principle">
+      <div class="principle-num">4</div>
+      <div>
+        <div class="principle-title">Kurze Sätze, klare Struktur</div>
+        <div class="principle-desc">Hauptsatz vor Nebensatz. Maximal 20 Wörter pro Satz in Fließtexten. Wenn ein Satz zwei Kommas hat, prüfen ob er sich teilen lässt. Absätze: max. 4–5 Zeilen.</div>
+      </div>
+    </div>
+
+    <div class="principle">
+      <div class="principle-num">5</div>
+      <div>
+        <div class="principle-title">Kein Buzzword-Salat</div>
+        <div class="principle-desc">Agile Begriffe sind erlaubt — wir sind Experten. Aber: Jeder Fachbegriff beim ersten Vorkommen kurz erklären oder mit einem konkreten Beispiel belegen. Nie mehrere Buzzwords in einem Satz.</div>
+      </div>
+    </div>
+
+    <div class="principle">
+      <div class="principle-num">6</div>
+      <div>
+        <div class="principle-title">Echte Wir-Perspektive</div>
+        <div class="principle-desc">„Wir" meint das Claudia-Thonet-Team, nicht ein anonymes Unternehmen. Es darf auch „Ich" sein — besonders in persönlichen Formaten (Blog, LinkedIn). Das macht die Marke greifbar.</div>
+      </div>
+    </div>
+
+    <div class="principle">
+      <div class="principle-num">7</div>
+      <div>
+        <div class="principle-title">Kein Superlativ ohne Beleg</div>
+        <div class="principle-desc">„Die beste Agile-Ausbildung" — beweisbar? Wenn ja: belegen. Wenn nicht: weglassen. Stattdessen: spezifische Stärken nennen, die der Leser selbst bewertet.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 3. ANREDE ─────────────────────────────────────────── -->
+  <section class="ds-section" id="anrede">
+    <div class="section-label">03 — Anrede</div>
+    <h2 class="section-title">Du oder Sie?</h2>
+    <p class="section-intro">Die Anrede ist eine bewusste Markentscheidung — und sie signalisiert Haltung. Für Claudia Thonet gilt:</p>
+    <div class="divider"></div>
+
+    <div class="anrede-box">
+      <h3>Empfehlung: Du — konsequent und konsistent</h3>
+      <p>In agilen Organisationen ist <strong>Augenhöhe kein Nice-to-have, sondern Prinzip</strong>. Das „Du" ist nicht kumpelhaft — es ist die natürliche Sprache einer Kultur, die auf Vertrauen, Offenheit und Zusammenarbeit setzt.</p>
+      <p>Das „Sie" schafft Distanz dort, wo Vertrauen gefragt ist. Unsere Zielgruppe — Führungskräfte, Coaches, Agile Practitioners — kommuniziert intern oft schon per „Du".</p>
+      <p><strong>Wichtig:</strong> Einheitlich entscheiden und dann konsequent durchziehen. Keine Mischung innerhalb einer Seite, eines Dokuments oder einer Kampagne. Wenn in bestimmten Formaten (z.B. sehr formale B2B-Angebote) das „Sie" sinnvoller ist, das Format separat als Ausnahme definieren.</p>
+    </div>
+
+    <br>
+
+    <div class="example-pair">
+      <div class="ex-do">
+        <div class="ex-label">✓ Du-Formulierung</div>
+        <div class="ex-text">„In dieser Ausbildung entwickelst du die Kompetenzen, die du als Agiler Coach brauchst — praxisnah und sofort anwendbar."</div>
+      </div>
+      <div class="ex-dont">
+        <div class="ex-label">✗ Sie-Formulierung</div>
+        <div class="ex-text">„In dieser Ausbildung entwickeln Sie die Kompetenzen, die Sie als Agiler Coach benötigen — praxisnah und direkt anwendbar."</div>
+        <div class="ex-note">Nicht falsch — aber schafft mehr Distanz</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 4. TONALITÄT ──────────────────────────────────────── -->
+  <section class="ds-section" id="tonalitaet">
+    <div class="section-label">04 — Tonalität nach Kontext</div>
+    <h2 class="section-title">Der richtige Ton für jeden Kanal</h2>
+    <p class="section-intro">Die Stimme bleibt gleich — der Ton passt sich dem Kontext an. Wie ein Mensch: anders im Meeting, anders beim Mittagessen, anders im Vortrag.</p>
+    <div class="divider"></div>
+
+    <div class="tone-scale">
+      <div class="tone-rows">
+
+        <div class="tone-row">
+          <div class="tone-bar-label">
+            <span style="font-weight:600;color:#333a45;">Website (Leistungsseiten)</span>
+            <span>Klar · Überzeugend · Nutzen-fokussiert</span>
+          </div>
+          <div class="tone-bar"><div class="tone-marker" style="left:65%;"></div></div>
+          <div style="font-size:13px;color:#5c626a;">Konkrete Ergebnisse in den Vordergrund. Wenig Adjektive, viele Verben. Der Leser entscheidet — kein Druck, aber klare Richtung.</div>
+        </div>
+
+        <div class="tone-row">
+          <div class="tone-bar-label">
+            <span style="font-weight:600;color:#333a45;">Blog / Fachinhalt</span>
+            <span>Nah · Lehrreich · Reflektiert</span>
+          </div>
+          <div class="tone-bar"><div class="tone-marker" style="left:40%;"></div></div>
+          <div style="font-size:13px;color:#5c626a;">Persönlicher, mit eigener Haltung. Erfahrungen teilen, Fragen stellen, Wissen aufbauen. Hier darf auch mal Ich gesagt werden.</div>
+        </div>
+
+        <div class="tone-row">
+          <div class="tone-bar-label">
+            <span style="font-weight:600;color:#333a45;">LinkedIn / Social Media</span>
+            <span>Lebendig · Direkt · Meinungsstark</span>
+          </div>
+          <div class="tone-bar"><div class="tone-marker" style="left:30%;"></div></div>
+          <div style="font-size:13px;color:#5c626a;">Hook im ersten Satz. Klare These. Konversation einladen. Keine Hausarbeits-Prosa. Emojis sparsam, nie als Ersatz für Inhalt.</div>
+        </div>
+
+        <div class="tone-row">
+          <div class="tone-bar-label">
+            <span style="font-weight:600;color:#333a45;">E-Books / Kursunterlagen</span>
+            <span>Strukturiert · Kompetent · Anwendungsnah</span>
+          </div>
+          <div class="tone-bar"><div class="tone-marker" style="left:70%;"></div></div>
+          <div style="font-size:13px;color:#5c626a;">Klarer Aufbau mit Lernzielen. Theorie immer mit Praxisbeispiel paaren. Komplexe Inhalte in verdauliche Einheiten teilen.</div>
+        </div>
+
+        <div class="tone-row">
+          <div class="tone-bar-label">
+            <span style="font-weight:600;color:#333a45;">E-Mail / Newsletter</span>
+            <span>Persönlich · Klar · Handlungsorientiert</span>
+          </div>
+          <div class="tone-bar"><div class="tone-marker" style="left:35%;"></div></div>
+          <div style="font-size:13px;color:#5c626a;">Direkte Ansprache, ein klares Thema pro Mail. Betreff konkret (keine Clickbait). Call to Action am Ende eindeutig.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 5. BEISPIELE ──────────────────────────────────────── -->
+  <section class="ds-section" id="beispiele">
+    <div class="section-label">05 — Formulierungsbeispiele</div>
+    <h2 class="section-title">So — nicht so</h2>
+    <p class="section-intro">Konkrete Vorher-Nachher-Beispiele aus typischen Kontexten der Marke.</p>
+    <div class="divider"></div>
+
+    <div class="example-pair">
+      <div class="ex-do">
+        <div class="ex-label">✓ So formulieren</div>
+        <div class="ex-text">„In 12 Monaten wirst du zum zertifizierten Agilen Coach — mit echten Werkzeugen für echte Teams."</div>
+      </div>
+      <div class="ex-dont">
+        <div class="ex-label">✗ Nicht so</div>
+        <div class="ex-text">„Unsere hochwertige Ausbildung zum Agilen Coach bietet Ihnen eine umfassende und praxisnahe Vorbereitung auf die vielseitigen Anforderungen des modernen Arbeitsumfelds."</div>
+        <div class="ex-note">Zu lang, zu passiv, zu vage, zu viel „wir"</div>
+      </div>
+    </div>
+
+    <div class="example-pair">
+      <div class="ex-do">
+        <div class="ex-label">✓ So formulieren</div>
+        <div class="ex-text">„Veränderung gelingt nicht mit Methoden allein. Sie braucht Menschen, die sie wirklich wollen — und jemanden, der sie dabei begleitet."</div>
+      </div>
+      <div class="ex-dont">
+        <div class="ex-label">✗ Nicht so</div>
+        <div class="ex-text">„Wir unterstützen Organisationen ganzheitlich bei der Implementierung agiler Transformationsprozesse mittels bewährter Methodiken."</div>
+        <div class="ex-note">Buzzword-Salat, Passivkonstruktion, kein Mensch sichtbar</div>
+      </div>
+    </div>
+
+    <div class="example-pair">
+      <div class="ex-do">
+        <div class="ex-label">✓ LinkedIn-Post Anfang</div>
+        <div class="ex-text">„Das größte Missverständnis über Agilität: Es geht nicht um Geschwindigkeit.<br><br>Es geht darum, schnell zu lernen, was nicht funktioniert."</div>
+      </div>
+      <div class="ex-dont">
+        <div class="ex-label">✗ LinkedIn-Post Anfang</div>
+        <div class="ex-text">„In einem unserer aktuellen Projekte hatten wir die Möglichkeit, spannende Erkenntnisse über agile Methodik zu gewinnen, die wir gerne mit Ihnen teilen möchten."</div>
+        <div class="ex-note">Kein Hook, passiv, langsam</div>
+      </div>
+    </div>
+
+    <div class="example-pair">
+      <div class="ex-do">
+        <div class="ex-label">✓ CTA formulieren</div>
+        <div class="ex-text">„Jetzt kostenlos anmelden →"<br>„Mehr zu dieser Ausbildung erfahren →"<br>„Deinen Platz sichern →"</div>
+      </div>
+      <div class="ex-dont">
+        <div class="ex-label">✗ CTA formulieren</div>
+        <div class="ex-text">„Hier klicken"<br>„Mehr Informationen"<br>„Kontaktieren Sie uns für weitere Informationen"</div>
+        <div class="ex-note">Zu generisch, keine Richtung, keine Energie</div>
+      </div>
+    </div>
+
+    <div class="quote-block">
+      „Ich begleite Teams und Führungskräfte, die spüren, dass ihre Art zu arbeiten nicht mehr zu den Herausforderungen passt — und die bereit sind, das zu ändern."
+      <cite>— Claudia Thonet, typischer persönlicher Ton für Bio/Über-mich-Seiten</cite>
+    </div>
+  </section>
+
+  <!-- ── 6. VOKABULAR ──────────────────────────────────────── -->
+  <section class="ds-section" id="vokabular">
+    <div class="section-label">06 — Vokabular</div>
+    <h2 class="section-title">Wörter bewusst wählen</h2>
+    <p class="section-intro">Bevorzugte und zu vermeidende Begriffe — für Konsistenz über alle Kanäle.</p>
+    <div class="divider"></div>
+
+    <table class="vocab-table">
+      <thead>
+        <tr>
+          <th>Verwende</th>
+          <th>Statt</th>
+          <th>Warum</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="word-use">begleiten</td>
+          <td class="word-avoid">betreuen / beraten</td>
+          <td class="word-note">„Begleiten" signalisiert Augenhöhe und Prozess, nicht Überlegenheit</td>
+        </tr>
+        <tr>
+          <td class="word-use">gestalten</td>
+          <td class="word-avoid">umsetzen / implementieren</td>
+          <td class="word-note">„Gestalten" ist aktiver und menschlicher — Transformation wird gemacht, nicht eingeführt</td>
+        </tr>
+        <tr>
+          <td class="word-use">lernen</td>
+          <td class="word-avoid">schulen / trainieren</td>
+          <td class="word-note">„Lernen" ist intrinsisch motiviert, „schulen" klingt nach Pflicht</td>
+        </tr>
+        <tr>
+          <td class="word-use">Team</td>
+          <td class="word-avoid">Ressourcen / Personal</td>
+          <td class="word-note">Menschen sind keine Ressource — die Sprache formt die Kultur</td>
+        </tr>
+        <tr>
+          <td class="word-use">Ausbildung / Programm</td>
+          <td class="word-avoid">Kurs / Training</td>
+          <td class="word-note">„Ausbildung" signalisiert Tiefe und Investition, nicht schnelles Durchlaufen</td>
+        </tr>
+        <tr>
+          <td class="word-use">Veränderung</td>
+          <td class="word-avoid">Change / Transition</td>
+          <td class="word-note">Im deutschen Kontext bleiben wir deutsch — Anglizismen nur wenn kein guter dt. Begriff existiert</td>
+        </tr>
+        <tr>
+          <td class="word-use">konkret / messbar</td>
+          <td class="word-avoid">nachhaltig / ganzheitlich</td>
+          <td class="word-note">„Nachhaltig" und „ganzheitlich" sind ausgelutscht — lieber sagen, was genau gemeint ist</td>
+        </tr>
+        <tr>
+          <td class="word-use">praxisnah</td>
+          <td class="word-avoid">praxisorientiert</td>
+          <td class="word-note">Kürzer, direkter, dasselbe Gewicht</td>
+        </tr>
+        <tr>
+          <td class="word-use">Agiler Coach / Agile Führung</td>
+          <td class="word-avoid">agile Coach / agile Leadership</td>
+          <td class="word-note">Einheitliche Großschreibung als Eigenname verwenden</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ── 7. CHECKLISTE ─────────────────────────────────────── -->
+  <section class="ds-section" id="checkliste">
+    <div class="section-label">07 — Redaktions-Checkliste</div>
+    <h2 class="section-title">Vor dem Veröffentlichen prüfen</h2>
+    <p class="section-intro">Diese Liste durchgehen, bevor ein Text live geht — auf der Website, in einem E-Book oder als Post.</p>
+    <div class="divider"></div>
+
+    <div class="checklist">
+      <div class="check-item">
+        <div class="check-icon yes">✓</div>
+        <div>Ist die Anrede (Du/Sie) <strong>konsistent</strong> durch den gesamten Text?</div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon yes">✓</div>
+        <div>Steht der <strong>Nutzen für den Leser</strong> im Vordergrund — nicht nur Beschreibung des Angebots?</div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon yes">✓</div>
+        <div>Sind alle Sätze im <strong>Aktiv</strong> formuliert — oder ist das Passiv hier wirklich besser?</div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon yes">✓</div>
+        <div>Sind Fachbegriffe beim ersten Auftreten <strong>kurz erklärt</strong> oder mit einem Beispiel belegt?</div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon yes">✓</div>
+        <div>Ist der Text <strong>frei von leeren Füllwörtern</strong> wie „natürlich", „selbstverständlich", „grundsätzlich"?</div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon yes">✓</div>
+        <div>Hat der Text <strong>einen klaren Call to Action</strong> — weiß der Leser, was er als nächstes tun soll?</div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon yes">✓</div>
+        <div>Passt der <strong>Ton zum Kanal</strong> (Website ≠ LinkedIn ≠ E-Mail)?</div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon no">✗</div>
+        <div>Enthält der Text <strong>ungestützte Superlative</strong> (beste, einzigartige, führende)?</div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon no">✗</div>
+        <div>Werden <strong>Menschen als Ressourcen</strong> oder Objekte bezeichnet?</div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon no">✗</div>
+        <div>Stehen <strong>mehr als 3 Substantivierungen</strong> in einem Satz (z.B. „Durchführung der Implementierung der Maßnahmen")?</div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon no">✗</div>
+        <div>Gibt es <strong>Widersprüche</strong> zur bevorzugten Vokabular-Liste?</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer style="text-align:center;font-size:12px;color:#5c626a;padding:32px;border-top:1px solid #dde0e4;">
+  <a href="index.html" style="color:#14b4be;text-decoration:none;font-weight:600;">← Zurück zum Design System</a>
+  &nbsp;·&nbsp; Claudia Thonet Agile Consulting GmbH · Erstellt April 2026
+</footer>
+
+</body>
+</html>

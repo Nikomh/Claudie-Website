@@ -1,0 +1,237 @@
+@import "tailwindcss";
+
+/* ---------- Basier Circle ---------- */
+@font-face {
+  font-family: "Basier Circle";
+  src: url("/fonts/BasierCircle-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Basier Circle";
+  src: url("/fonts/BasierCircle-RegularItalic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Basier Circle";
+  src: url("/fonts/BasierCircle-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Basier Circle";
+  src: url("/fonts/BasierCircle-MediumItalic.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Basier Circle";
+  src: url("/fonts/BasierCircle-SemiBold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Basier Circle";
+  src: url("/fonts/BasierCircle-SemiBoldItalic.otf") format("opentype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Basier Circle";
+  src: url("/fonts/BasierCircle-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Basier Circle";
+  src: url("/fonts/BasierCircle-BoldItalic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ---------- Basier Circle Narrow ---------- */
+@font-face {
+  font-family: "Basier Circle Narrow";
+  src: url("/fonts/BasierCircleNarrow-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Basier Circle Narrow";
+  src: url("/fonts/BasierCircleNarrow-RegularItalic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Basier Circle Narrow";
+  src: url("/fonts/BasierCircleNarrow-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Basier Circle Narrow";
+  src: url("/fonts/BasierCircleNarrow-MediumItalic.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Basier Circle Narrow";
+  src: url("/fonts/BasierCircleNarrow-SemiBold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Basier Circle Narrow";
+  src: url("/fonts/BasierCircleNarrow-SemiBoldItalic.otf") format("opentype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Basier Circle Narrow";
+  src: url("/fonts/BasierCircleNarrow-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Basier Circle Narrow";
+  src: url("/fonts/BasierCircleNarrow-BoldItalic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@theme {
+  --color-anthrazit: #333a45;
+  --color-anthrazit-80: #5c626a;
+  --color-tuerkis: #14b4be;
+  --color-tuerkis-80: #43c3cb;
+  --color-tuerkis-50: #8adadf;
+  --color-orange-rot: #fc551e;
+  --color-bg: #f7f8f9;
+  --color-bg-section: #eef0f2;
+  --color-border: #dde0e4;
+
+  --font-sans: "Basier Circle", Arial, sans-serif;
+  --font-narrow: "Basier Circle Narrow", "Basier Circle", Arial, sans-serif;
+
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --radius-lg: 20px;
+
+  --animate-fade-in-up: fade-in-up 0.6s ease-out both;
+  --animate-fade-in: fade-in 0.4s ease-out both;
+  --animate-scale-in: scale-in 0.3s ease-out both;
+  --animate-slide-down: slide-down 0.3s ease-out both;
+  --animate-marquee: marquee 30s linear infinite;
+  --animate-float: float 3s ease-in-out infinite alternate;
+  --animate-shimmer: shimmer 0.8s linear infinite;
+  --animate-accordion-down: accordion-down 0.3s ease-out both;
+  --animate-accordion-up: accordion-up 0.25s ease-in both;
+}
+
+@keyframes accordion-down {
+  from { height: 0; opacity: 0; }
+  to { height: var(--radix-accordion-content-height); opacity: 1; }
+}
+
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); opacity: 1; }
+  to { height: 0; opacity: 0; }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-down {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+  to {
+    max-height: 1000px;
+    opacity: 1;
+  }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes float {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-8px); }
+}
+
+@keyframes shimmer {
+  from { background-position: -200% 0; }
+  to   { background-position: 200% 0; }
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-anthrazit);
+  background: var(--color-bg);
+}
+
+::selection {
+  background: var(--color-tuerkis-50);
+  color: var(--color-anthrazit);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

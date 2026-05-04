@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design System — Claudia Thonet Agile Consulting GmbH</title>
+  <style>
+    /* ─── Base ──────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      /* Official brand colors from Farben_Schriften_Logovarianten.pdf */
+      --color-anthrazit:       #333a45;   /* Primary dark */
+      --color-tuerkis:         #14b4be;   /* Primary teal */
+      --color-orange-rot:      #fc551e;   /* Accent orange-red */
+      --color-anthrazit-80:    #5c626a;   /* Secondary dark */
+      --color-tuerkis-80:      #43c3cb;   /* Teal 80% */
+      --color-tuerkis-50:      #8adadf;   /* Teal 50% */
+      --color-white:           #ffffff;
+      --color-bg:              #f7f8f9;
+      --color-bg-section:      #eef0f2;
+      --color-border:          #dde0e4;
+
+      /* Typography */
+      --font-primary: 'Basier Circle', 'Basier Circle Web', Arial, sans-serif;
+      --font-weight-regular:   400;
+      --font-weight-medium:    500;
+      --font-weight-semibold:  600;
+      --font-weight-bold:      700;
+
+      /* Type scale */
+      --text-xs:    12px;
+      --text-sm:    14px;
+      --text-base:  16px;
+      --text-md:    18px;
+      --text-lg:    22px;
+      --text-xl:    28px;
+      --text-2xl:   36px;
+      --text-3xl:   48px;
+
+      /* Spacing scale (4px base) */
+      --space-1:   4px;
+      --space-2:   8px;
+      --space-3:  12px;
+      --space-4:  16px;
+      --space-5:  20px;
+      --space-6:  24px;
+      --space-8:  32px;
+      --space-10: 40px;
+      --space-12: 48px;
+      --space-16: 64px;
+      --space-20: 80px;
+
+      /* Border radius */
+      --radius-sm:   4px;   /* buttons, badges */
+      --radius-md:  10px;   /* cards */
+      --radius-lg:  20px;   /* large cards */
+      --radius-full: 50%;   /* circles */
+    }
+
+    body {
+      font-family: var(--font-primary);
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-regular);
+      color: var(--color-anthrazit);
+      background: var(--color-bg);
+      line-height: 1.6;
+    }
+
+    /* ─── Layout ─────────────────────────────────────────────── */
+    .ds-header {
+      background: var(--color-anthrazit);
+      color: var(--color-white);
+      padding: var(--space-12) var(--space-16);
+      display: flex;
+      align-items: center;
+      gap: var(--space-8);
+    }
+
+    .ds-header-logo {
+      display: flex;
+      align-items: center;
+      gap: var(--space-5);
+    }
+
+    .ds-header-logo svg {
+      width: 56px;
+      height: 56px;
+      flex-shrink: 0;
+    }
+
+    .ds-header-title {
+      font-size: var(--text-xs);
+      font-weight: var(--font-weight-semibold);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-tuerkis-50);
+      margin-bottom: var(--space-1);
+    }
+
+    .ds-header-name {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-semibold);
+      line-height: 1.2;
+    }
+
+    .ds-header-sub {
+      font-size: var(--text-sm);
+      color: rgba(255,255,255,0.55);
+      margin-top: var(--space-1);
+    }
+
+    .ds-nav {
+      background: var(--color-white);
+      border-bottom: 1px solid var(--color-border);
+      padding: 0 var(--space-16);
+      display: flex;
+      gap: var(--space-6);
+      overflow-x: auto;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .ds-nav a {
+      font-size: var(--text-sm);
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-anthrazit-80);
+      text-decoration: none;
+      padding: var(--space-4) 0;
+      border-bottom: 2px solid transparent;
+      white-space: nowrap;
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    .ds-nav a:hover {
+      color: var(--color-tuerkis);
+      border-bottom-color: var(--color-tuerkis);
+    }
+
+    .ds-main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: var(--space-12) var(--space-8);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-16);
+    }
+
+    /* ─── Section ─────────────────────────────────────────────── */
+    .ds-section { scroll-margin-top: 60px; }
+
+    .ds-section-label {
+      font-size: var(--text-xs);
+      font-weight: var(--font-weight-semibold);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-tuerkis);
+      margin-bottom: var(--space-2);
+    }
+
+    .ds-section-title {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-anthrazit);
+      margin-bottom: var(--space-2);
+    }
+
+    .ds-section-desc {
+      font-size: var(--text-base);
+      color: var(--color-anthrazit-80);
+      margin-bottom: var(--space-8);
+      max-width: 640px;
+    }
+
+    .ds-divider {
+      height: 1px;
+      background: var(--color-border);
+      margin-bottom: var(--space-8);
+    }
+
+    /* ─── Color Palette ──────────────────────────────────────── */
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: var(--space-4);
+    }
+
+    .color-swatch {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    .color-swatch-block {
+      height: 80px;
+      width: 100%;
+    }
+
+    .color-swatch-info {
+      padding: var(--space-3) var(--space-4);
+    }
+
+    .color-swatch-name {
+      font-size: var(--text-sm);
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-anthrazit);
+      margin-bottom: 2px;
+    }
+
+    .color-swatch-hex {
+      font-size: var(--text-xs);
+      color: var(--color-anthrazit-80);
+      font-family: 'SF Mono', 'Fira Code', monospace;
+    }
+
+    .color-swatch-rgb {
+      font-size: 11px;
+      color: var(--color-anthrazit-80);
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      margin-top: 1px;
+    }
+
+    .color-tag {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: var(--font-weight-semibold);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 2px 6px;
+      border-radius: 3px;
+      margin-top: var(--space-2);
+    }
+
+    .tag-primary { background: #e8f7f8; color: var(--color-tuerkis); }
+    .tag-dark    { background: #eaebec; color: var(--color-anthrazit); }
+    .tag-accent  { background: #fff0eb; color: var(--color-orange-rot); }
+    .tag-tint    { background: #f0fafb; color: var(--color-tuerkis-80); }
+
+    /* ─── Typography ─────────────────────────────────────────── */
+    .type-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--color-white);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+    }
+
+    .type-table th {
+      text-align: left;
+      font-size: var(--text-xs);
+      font-weight: var(--font-weight-semibold);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-anthrazit-80);
+      background: var(--color-bg-section);
+      padding: var(--space-3) var(--space-5);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .type-table td {
+      padding: var(--space-4) var(--space-5);
+      border-bottom: 1px solid var(--color-border);
+      vertical-align: middle;
+    }
+
+    .type-table tr:last-child td { border-bottom: none; }
+
+    .type-label {
+      font-size: var(--text-xs);
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-anthrazit-80);
+      font-family: 'SF Mono', 'Fira Code', monospace;
+    }
+
+    .type-meta {
+      font-size: var(--text-xs);
+      color: var(--color-anthrazit-80);
+      font-family: 'SF Mono', 'Fira Code', monospace;
+    }
+
+    .type-sample { line-height: 1.2; }
+
+    /* ─── Font weight samples ────────────────────────────────── */
+    .font-weights {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: var(--space-4);
+    }
+
+    .font-weight-card {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: var(--space-6);
+    }
+
+    .font-weight-sample {
+      font-size: var(--text-xl);
+      color: var(--color-anthrazit);
+      margin-bottom: var(--space-2);
+      line-height: 1.2;
+    }
+
+    .font-weight-meta {
+      font-size: var(--text-xs);
+      color: var(--color-anthrazit-80);
+      font-family: 'SF Mono', 'Fira Code', monospace;
+    }
+
+    /* ─── Logo ───────────────────────────────────────────────── */
+    .logo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: var(--space-4);
+    }
+
+    .logo-card {
+      border-radius: var(--radius-md);
+      border: 1px solid var(--color-border);
+      overflow: hidden;
+    }
+
+    .logo-card-bg {
+      padding: var(--space-10);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 140px;
+    }
+
+    .logo-card-info {
+      background: var(--color-white);
+      padding: var(--space-3) var(--space-5);
+      border-top: 1px solid var(--color-border);
+      font-size: var(--text-sm);
+      color: var(--color-anthrazit-80);
+    }
+
+    .logo-card-info strong {
+      display: block;
+      color: var(--color-anthrazit);
+      font-weight: var(--font-weight-semibold);
+      margin-bottom: 2px;
+    }
+
+    /* ─── Spacing ─────────────────────────────────────────────── */
+    .spacing-grid {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+    }
+
+    .spacing-row {
+      display: flex;
+      align-items: center;
+      gap: var(--space-5);
+    }
+
+    .spacing-label {
+      font-size: var(--text-xs);
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      color: var(--color-anthrazit-80);
+      width: 90px;
+      flex-shrink: 0;
+    }
+
+    .spacing-bar-wrap {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+    }
+
+    .spacing-bar {
+      height: 20px;
+      background: var(--color-tuerkis);
+      border-radius: 3px;
+      opacity: 0.75;
+      flex-shrink: 0;
+    }
+
+    .spacing-value {
+      font-size: var(--text-xs);
+      color: var(--color-anthrazit-80);
+      font-family: 'SF Mono', 'Fira Code', monospace;
+    }
+
+    /* ─── Components ─────────────────────────────────────────── */
+    .component-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-4);
+      align-items: center;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: var(--space-3) var(--space-6);
+      font-family: var(--font-primary);
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-semibold);
+      border-radius: var(--radius-sm);
+      border: 2px solid transparent;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.15s;
+      line-height: 1.4;
+    }
+
+    .btn-primary {
+      background: var(--color-tuerkis);
+      color: var(--color-white);
+      border-color: var(--color-tuerkis);
+    }
+
+    .btn-primary:hover {
+      background: #0fa0a9;
+      border-color: #0fa0a9;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--color-tuerkis);
+      border-color: var(--color-tuerkis);
+    }
+
+    .btn-secondary:hover {
+      background: var(--color-tuerkis);
+      color: var(--color-white);
+    }
+
+    .btn-dark {
+      background: var(--color-anthrazit);
+      color: var(--color-white);
+      border-color: var(--color-anthrazit);
+    }
+
+    .btn-accent {
+      background: var(--color-orange-rot);
+      color: var(--color-white);
+      border-color: var(--color-orange-rot);
+    }
+
+    .btn-sm {
+      font-size: var(--text-sm);
+      padding: var(--space-2) var(--space-4);
+    }
+
+    .btn-lg {
+      font-size: var(--text-md);
+      padding: var(--space-4) var(--space-8);
+    }
+
+    /* Badges */
+    .badge {
+      display: inline-block;
+      font-size: var(--text-xs);
+      font-weight: var(--font-weight-semibold);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: var(--radius-sm);
+    }
+
+    .badge-teal    { background: #d8f3f5; color: var(--color-tuerkis); }
+    .badge-dark    { background: #e8eaec; color: var(--color-anthrazit); }
+    .badge-accent  { background: #ffe8e0; color: var(--color-orange-rot); }
+    .badge-outline { background: transparent; color: var(--color-tuerkis); border: 1px solid var(--color-tuerkis); }
+
+    /* Cards */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: var(--space-5);
+    }
+
+    .card {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: var(--space-6);
+      box-shadow: 0 2px 8px rgba(51,58,69,0.06);
+    }
+
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-full);
+      background: #e8f7f8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: var(--space-4);
+    }
+
+    .card-icon svg { color: var(--color-tuerkis); }
+
+    .card-title {
+      font-size: var(--text-md);
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-anthrazit);
+      margin-bottom: var(--space-2);
+    }
+
+    .card-body {
+      font-size: var(--text-sm);
+      color: var(--color-anthrazit-80);
+      line-height: 1.6;
+    }
+
+    .card-accent {
+      border-top: 3px solid var(--color-tuerkis);
+    }
+
+    .card-dark {
+      background: var(--color-anthrazit);
+      border-color: var(--color-anthrazit);
+      color: var(--color-white);
+    }
+
+    .card-dark .card-title { color: var(--color-white); }
+    .card-dark .card-body  { color: rgba(255,255,255,0.7); }
+    .card-dark .card-icon  { background: rgba(20,180,190,0.2); }
+
+    /* ─── Illustration style note ────────────────────────────── */
+    .illus-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: var(--space-4);
+    }
+
+    .illus-card {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: var(--space-6);
+      font-size: var(--text-sm);
+      color: var(--color-anthrazit);
+    }
+
+    .illus-card-icon {
+      font-size: 32px;
+      margin-bottom: var(--space-3);
+    }
+
+    .illus-card-title {
+      font-weight: var(--font-weight-semibold);
+      margin-bottom: var(--space-2);
+    }
+
+    .illus-card-desc {
+      color: var(--color-anthrazit-80);
+      font-size: var(--text-xs);
+      line-height: 1.5;
+    }
+
+    /* ─── Asset Inventory ────────────────────────────────────── */
+    .asset-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: var(--space-4);
+    }
+
+    .asset-card {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+
+    .asset-card-header {
+      background: var(--color-bg-section);
+      padding: var(--space-4) var(--space-5);
+      border-bottom: 1px solid var(--color-border);
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+    }
+
+    .asset-card-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .asset-card-icon.teal  { background: #d8f3f5; }
+    .asset-card-icon.dark  { background: #e8eaec; }
+    .asset-card-icon.orange{ background: #ffe8e0; }
+
+    .asset-card-name {
+      font-size: var(--text-sm);
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-anthrazit);
+    }
+
+    .asset-card-body {
+      padding: var(--space-4) var(--space-5);
+      font-size: var(--text-xs);
+      color: var(--color-anthrazit-80);
+      line-height: 1.6;
+    }
+
+    .asset-count {
+      display: inline-block;
+      background: var(--color-bg-section);
+      color: var(--color-anthrazit);
+      font-size: 11px;
+      font-weight: var(--font-weight-semibold);
+      border-radius: 99px;
+      padding: 1px 8px;
+      margin-top: var(--space-2);
+    }
+
+    /* ─── Do/Don't ──────────────────────────────────────────── */
+    .do-dont-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-5);
+    }
+
+    .do-card {
+      border: 1px solid #b8e8eb;
+      background: #f0fafb;
+      border-radius: var(--radius-md);
+      padding: var(--space-5);
+    }
+
+    .dont-card {
+      border: 1px solid #f5c4b4;
+      background: #fff5f0;
+      border-radius: var(--radius-md);
+      padding: var(--space-5);
+    }
+
+    .do-card-label, .dont-card-label {
+      font-size: var(--text-xs);
+      font-weight: var(--font-weight-semibold);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: var(--space-3);
+    }
+
+    .do-card-label   { color: #0a8a93; }
+    .dont-card-label { color: #c94010; }
+
+    .do-card ul, .dont-card ul {
+      padding-left: var(--space-5);
+      font-size: var(--text-sm);
+      color: var(--color-anthrazit);
+      line-height: 1.8;
+    }
+
+    /* ─── Code ───────────────────────────────────────────────── */
+    .token-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--color-white);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+      font-size: var(--text-sm);
+    }
+
+    .token-table th {
+      text-align: left;
+      font-size: var(--text-xs);
+      font-weight: var(--font-weight-semibold);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-anthrazit-80);
+      background: var(--color-bg-section);
+      padding: var(--space-3) var(--space-5);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .token-table td {
+      padding: var(--space-3) var(--space-5);
+      border-bottom: 1px solid var(--color-border);
+      vertical-align: middle;
+    }
+
+    .token-table tr:last-child td { border-bottom: none; }
+
+    .token-name {
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      color: var(--color-tuerkis);
+    }
+
+    .token-value {
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      color: var(--color-anthrazit-80);
+    }
+
+    .color-dot {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 3px;
+      vertical-align: middle;
+      margin-right: 6px;
+      border: 1px solid rgba(0,0,0,0.1);
+    }
+
+    /* ─── Footer ─────────────────────────────────────────────── */
+    .ds-footer {
+      background: var(--color-anthrazit);
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: var(--space-8);
+      font-size: var(--text-xs);
+      margin-top: var(--space-16);
+    }
+
+    .ds-footer strong { color: rgba(255,255,255,0.85); }
+
+    @media (max-width: 640px) {
+      .ds-header { padding: var(--space-8); flex-direction: column; align-items: flex-start; }
+      .ds-main   { padding: var(--space-8) var(--space-5); }
+      .ds-nav    { padding: 0 var(--space-5); }
+      .do-dont-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══ HEADER ═══════════════════════════════════════════════ -->
+<header class="ds-header">
+  <div class="ds-header-logo">
+    <!-- Inline logo mark: lightbulb with teal burst -->
+    <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="28" cy="28" r="28" fill="#333a45"/>
+      <!-- Teal spiky burst -->
+      <g fill="#14b4be">
+        <polygon points="28,4 30,13 26,13"/>
+        <polygon points="28,52 30,43 26,43"/>
+        <polygon points="4,28 13,30 13,26"/>
+        <polygon points="52,28 43,30 43,26"/>
+        <polygon points="9.4,9.4 16.5,14.8 13,18.3"/>
+        <polygon points="46.6,46.6 39.5,41.2 43,37.7"/>
+        <polygon points="46.6,9.4 41.2,16.5 37.7,13"/>
+        <polygon points="9.4,46.6 14.8,39.5 18.3,43"/>
+      </g>
+      <!-- Bulb body -->
+      <ellipse cx="28" cy="27" rx="10" ry="12" fill="white" opacity="0.95"/>
+      <rect x="23" y="37" width="10" height="3" rx="1.5" fill="white" opacity="0.7"/>
+      <rect x="24" y="40" width="8" height="2" rx="1" fill="white" opacity="0.5"/>
+      <!-- Spiral inside bulb -->
+      <path d="M28 22 C26 24 30 26 28 28 C26 30 30 32 28 34" stroke="#14b4be" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <!-- Arrow up -->
+      <path d="M28 18 L26 21 M28 18 L30 21" stroke="#14b4be" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>
+
+    <div>
+      <div class="ds-header-title">Design System</div>
+      <div class="ds-header-name">Claudia Thonet</div>
+      <div class="ds-header-sub">Agile Consulting GmbH &nbsp;·&nbsp; Stand 2024</div>
+    </div>
+  </div>
+</header>
+
+<!-- ═══ NAV ══════════════════════════════════════════════════ -->
+<nav class="ds-nav">
+  <a href="#colors">Farben</a>
+  <a href="#typography">Typografie</a>
+  <a href="#logo">Logo</a>
+  <a href="#spacing">Abstände</a>
+  <a href="#components">Komponenten</a>
+  <a href="#tone">Tonalität</a>
+  <a href="#assets">Assets</a>
+  <a href="#tokens">Tokens</a>
+</nav>
+
+<!-- ═══ MAIN ══════════════════════════════════════════════════ -->
+<main class="ds-main">
+
+  <!-- ── 1. FARBEN ─────────────────────────────────────────── -->
+  <section class="ds-section" id="colors">
+    <div class="ds-section-label">01 — Farben</div>
+    <h2 class="ds-section-title">Farbpalette</h2>
+    <p class="ds-section-desc">Alle Farben stammen aus der offiziellen Markendokumentation (<em>Farben_Schriften_Logovarianten.pdf</em>). Primär für Web, Screens und Office-Programme.</p>
+    <div class="ds-divider"></div>
+
+    <div class="color-grid">
+
+      <div class="color-swatch">
+        <div class="color-swatch-block" style="background:#333a45;"></div>
+        <div class="color-swatch-info">
+          <div class="color-swatch-name">Anthrazit</div>
+          <div class="color-swatch-hex">#333a45</div>
+          <div class="color-swatch-rgb">R=51 G=58 B=69</div>
+          <span class="color-tag tag-dark">Primärfarbe</span>
+        </div>
+      </div>
+
+      <div class="color-swatch">
+        <div class="color-swatch-block" style="background:#14b4be;"></div>
+        <div class="color-swatch-info">
+          <div class="color-swatch-name">Türkis</div>
+          <div class="color-swatch-hex">#14b4be</div>
+          <div class="color-swatch-rgb">R=20 G=180 B=190</div>
+          <span class="color-tag tag-primary">Markenfarbe</span>
+        </div>
+      </div>
+
+      <div class="color-swatch">
+        <div class="color-swatch-block" style="background:#fc551e;"></div>
+        <div class="color-swatch-info">
+          <div class="color-swatch-name">Orangerot</div>
+          <div class="color-swatch-hex">#fc551e</div>
+          <div class="color-swatch-rgb">R=252 G=85 B=30</div>
+          <span class="color-tag tag-accent">Akzentfarbe</span>
+        </div>
+      </div>
+
+      <div class="color-swatch">
+        <div class="color-swatch-block" style="background:#5c626a;"></div>
+        <div class="color-swatch-info">
+          <div class="color-swatch-name">Anthrazit 80%</div>
+          <div class="color-swatch-hex">#5c626a</div>
+          <div class="color-swatch-rgb">R=92 G=98 B=106</div>
+          <span class="color-tag tag-dark">Dunkler Hintergrund</span>
+        </div>
+      </div>
+
+      <div class="color-swatch">
+        <div class="color-swatch-block" style="background:#43c3cb;"></div>
+        <div class="color-swatch-info">
+          <div class="color-swatch-name">Türkis 80%</div>
+          <div class="color-swatch-hex">#43c3cb</div>
+          <div class="color-swatch-rgb">R=67 G=195 B=203</div>
+          <span class="color-tag tag-tint">Tint</span>
+        </div>
+      </div>
+
+      <div class="color-swatch">
+        <div class="color-swatch-block" style="background:#8adadf;"></div>
+        <div class="color-swatch-info">
+          <div class="color-swatch-name">Türkis 50%</div>
+          <div class="color-swatch-hex">#8adadf</div>
+          <div class="color-swatch-rgb">R=138 G=218 B=223</div>
+          <span class="color-tag tag-tint">Tint (leicht)</span>
+        </div>
+      </div>
+
+      <div class="color-swatch">
+        <div class="color-swatch-block" style="background:#ffffff; border-bottom: 1px solid #dde0e4;"></div>
+        <div class="color-swatch-info">
+          <div class="color-swatch-name">Weiß</div>
+          <div class="color-swatch-hex">#ffffff</div>
+          <div class="color-swatch-rgb">R=255 G=255 B=255</div>
+          <span class="color-tag tag-dark">Hintergrund</span>
+        </div>
+      </div>
+
+    </div>
+
+    <br>
+    <div class="do-dont-grid">
+      <div class="do-card">
+        <div class="do-card-label">✓ So verwenden</div>
+        <ul>
+          <li>Türkis als primäre CTA-Farbe nutzen</li>
+          <li>Anthrazit für Texte &amp; dunkle Bereiche</li>
+          <li>Orangerot sparsam als Kontrast-Akzent</li>
+          <li>Türkis-Tints für Hintergründe und Icons</li>
+          <li>Ausreichend Kontrast zu Weiß sicherstellen</li>
+        </ul>
+      </div>
+      <div class="dont-card">
+        <div class="dont-card-label">✗ Nicht verwenden</div>
+        <ul>
+          <li>Orangerot als dominante Flächenfarbe</li>
+          <li>Türkis 80% auf Türkis-Hintergrund</li>
+          <li>Neue, nicht abgestimmte Farben einführen</li>
+          <li>Niedrige Kontraste bei Fließtext</li>
+          <li>Mehrere Akzentfarben auf einer Seite</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 2. TYPOGRAFIE ──────────────────────────────────────── -->
+  <section class="ds-section" id="typography">
+    <div class="ds-section-label">02 — Typografie</div>
+    <h2 class="ds-section-title">Schrift &amp; Skalierung</h2>
+    <p class="ds-section-desc"><strong>Basier Circle</strong> ist die einzige Schriftfamilie. Regular für Fließtext, Semibold für Überschriften und Auszeichnungen. Fallback: Arial, sans-serif.</p>
+    <div class="ds-divider"></div>
+
+    <div class="font-weights">
+      <div class="font-weight-card">
+        <div class="font-weight-sample" style="font-weight:400;">Basier Circle</div>
+        <div class="font-weight-meta">Regular · 400 · Fließtext</div>
+      </div>
+      <div class="font-weight-card">
+        <div class="font-weight-sample" style="font-weight:500;">Basier Circle</div>
+        <div class="font-weight-meta">Medium · 500 · Subtitel</div>
+      </div>
+      <div class="font-weight-card">
+        <div class="font-weight-sample" style="font-weight:600;">Basier Circle</div>
+        <div class="font-weight-meta">Semibold · 600 · Überschriften</div>
+      </div>
+      <div class="font-weight-card">
+        <div class="font-weight-sample" style="font-weight:700;">Basier Circle</div>
+        <div class="font-weight-meta">Bold · 700 · Auszeichnung</div>
+      </div>
+    </div>
+
+    <br>
+
+    <table class="type-table">
+      <thead>
+        <tr>
+          <th>Stil</th>
+          <th>Vorschau</th>
+          <th>Eigenschaften</th>
+          <th>Verwendung</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="type-label">Display</td>
+          <td><span class="type-sample" style="font-size:48px;font-weight:600;line-height:1;">Agil.</span></td>
+          <td class="type-meta">48px · Semibold · 1.1</td>
+          <td class="type-meta">Hero-Bereiche</td>
+        </tr>
+        <tr>
+          <td class="type-label">H1</td>
+          <td><span class="type-sample" style="font-size:36px;font-weight:600;line-height:1.1;">Agile Ausbildung</span></td>
+          <td class="type-meta">36px · Semibold · 1.1</td>
+          <td class="type-meta">Seitentitel</td>
+        </tr>
+        <tr>
+          <td class="type-label">H2</td>
+          <td><span class="type-sample" style="font-size:28px;font-weight:600;line-height:1.2;">Agiler Coach</span></td>
+          <td class="type-meta">28px · Semibold · 1.2</td>
+          <td class="type-meta">Abschnittstitel</td>
+        </tr>
+        <tr>
+          <td class="type-label">H3</td>
+          <td><span class="type-sample" style="font-size:22px;font-weight:600;line-height:1.3;">Veränderung gestalten</span></td>
+          <td class="type-meta">22px · Semibold · 1.3</td>
+          <td class="type-meta">Karten-Titel</td>
+        </tr>
+        <tr>
+          <td class="type-label">Body Large</td>
+          <td><span class="type-sample" style="font-size:18px;font-weight:400;line-height:1.6;">Agile Beratung &amp; Coaching</span></td>
+          <td class="type-meta">18px · Regular · 1.6</td>
+          <td class="type-meta">Intro-Text</td>
+        </tr>
+        <tr>
+          <td class="type-label">Body</td>
+          <td><span class="type-sample" style="font-size:16px;font-weight:400;line-height:1.6;">Gemeinsam Transformation gestalten.</span></td>
+          <td class="type-meta">16px · Regular · 1.6</td>
+          <td class="type-meta">Fließtext</td>
+        </tr>
+        <tr>
+          <td class="type-label">Small</td>
+          <td><span class="type-sample" style="font-size:14px;font-weight:400;line-height:1.5;">Mehr erfahren über unsere Methoden</span></td>
+          <td class="type-meta">14px · Regular · 1.5</td>
+          <td class="type-meta">Captions, Meta</td>
+        </tr>
+        <tr>
+          <td class="type-label">Label</td>
+          <td><span class="type-sample" style="font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;">Agile Methoden</span></td>
+          <td class="type-meta">12px · Semibold · Uppercase</td>
+          <td class="type-meta">Kategorie-Labels</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ── 3. LOGO ────────────────────────────────────────────── -->
+  <section class="ds-section" id="logo">
+    <div class="ds-section-label">03 — Logo</div>
+    <h2 class="ds-section-title">Logo-Varianten</h2>
+    <p class="ds-section-desc">Dateien liegen in <em>Marke &amp; Design / Logo-Varianten Claudia Thonet ab 01 2024</em> bereit — je nach Hintergrund die passende Variante wählen.</p>
+    <div class="ds-divider"></div>
+
+    <div class="logo-grid">
+      <div class="logo-card">
+        <div class="logo-card-bg" style="background:#ffffff;">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='60' viewBox='0 0 240 60'%3E%3Ccircle cx='30' cy='30' r='28' fill='%23333a45'/%3E%3Cpolygon points='30,2 32,11 28,11' fill='%2314b4be'/%3E%3Cpolygon points='30,58 32,49 28,49' fill='%2314b4be'/%3E%3Cpolygon points='2,30 11,32 11,28' fill='%2314b4be'/%3E%3Cpolygon points='58,30 49,32 49,28' fill='%2314b4be'/%3E%3Cellipse cx='30' cy='29' rx='9' ry='11' fill='white' opacity='0.95'/%3E%3Crect x='25' y='38' width='10' height='3' rx='1.5' fill='white' opacity='0.7'/%3E%3Cpath d='M30 22 C28 24 32 26 30 28 C28 30 32 32 30 34' stroke='%2314b4be' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3Ctext x='70' y='35' font-family='Arial' font-size='22' font-weight='600' fill='%23333a45'%3EClaudia Thonet%3C/text%3E%3Ctext x='70' y='50' font-family='Arial' font-size='11' font-weight='600' fill='%23333a45' letter-spacing='2'%3EAGILE CONSULTING GMBH%3C/text%3E%3C/svg%3E" alt="Logo hell" style="max-width:100%;">
+        </div>
+        <div class="logo-card-info">
+          <strong>Heller Hintergrund</strong>
+          Logo_querformatig_fuer_hellen_Hintergrund_web_office.png
+        </div>
+      </div>
+
+      <div class="logo-card">
+        <div class="logo-card-bg" style="background:#333a45;">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='60' viewBox='0 0 240 60'%3E%3Ccircle cx='30' cy='30' r='28' fill='%2314b4be'/%3E%3Cpolygon points='30,2 32,11 28,11' fill='%23333a45'/%3E%3Cpolygon points='30,58 32,49 28,49' fill='%23333a45'/%3E%3Cpolygon points='2,30 11,32 11,28' fill='%23333a45'/%3E%3Cpolygon points='58,30 49,32 49,28' fill='%23333a45'/%3E%3Cellipse cx='30' cy='29' rx='9' ry='11' fill='%23333a45' opacity='0.9'/%3E%3Crect x='25' y='38' width='10' height='3' rx='1.5' fill='%23333a45' opacity='0.7'/%3E%3Cpath d='M30 22 C28 24 32 26 30 28 C28 30 32 32 30 34' stroke='%2314b4be' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3Ctext x='70' y='35' font-family='Arial' font-size='22' font-weight='600' fill='white'%3EClaudia Thonet%3C/text%3E%3Ctext x='70' y='50' font-family='Arial' font-size='11' font-weight='600' fill='white' opacity='0.7' letter-spacing='2'%3EAGILE CONSULTING GMBH%3C/text%3E%3C/svg%3E" alt="Logo dunkel" style="max-width:100%;">
+        </div>
+        <div class="logo-card-info">
+          <strong>Dunkler Hintergrund</strong>
+          Logo_querformatig_fuer_dunklen_Hintergrund_web_office.png
+        </div>
+      </div>
+
+      <div class="logo-card">
+        <div class="logo-card-bg" style="background:#14b4be;">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='60' viewBox='0 0 240 60'%3E%3Ccircle cx='30' cy='30' r='28' fill='%23333a45'/%3E%3Cpolygon points='30,2 32,11 28,11' fill='white'/%3E%3Cpolygon points='30,58 32,49 28,49' fill='white'/%3E%3Cpolygon points='2,30 11,32 11,28' fill='white'/%3E%3Cpolygon points='58,30 49,32 49,28' fill='white'/%3E%3Cellipse cx='30' cy='29' rx='9' ry='11' fill='white' opacity='0.95'/%3E%3Crect x='25' y='38' width='10' height='3' rx='1.5' fill='white' opacity='0.7'/%3E%3Cpath d='M30 22 C28 24 32 26 30 28 C28 30 32 32 30 34' stroke='%2314b4be' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3Ctext x='70' y='35' font-family='Arial' font-size='22' font-weight='600' fill='white'%3EClaudia Thonet%3C/text%3E%3Ctext x='70' y='50' font-family='Arial' font-size='11' font-weight='600' fill='white' opacity='0.8' letter-spacing='2'%3EAGILE CONSULTING GMBH%3C/text%3E%3C/svg%3E" alt="Logo türkis" style="max-width:100%;">
+        </div>
+        <div class="logo-card-info">
+          <strong>Türkiser Hintergrund</strong>
+          Logo_querformatig_fuer_tuerkisen_Hintergrund_web_office.png
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <div class="do-dont-grid">
+      <div class="do-card">
+        <div class="do-card-label">✓ Korrekte Verwendung</div>
+        <ul>
+          <li>Immer die passende Hintergrundvariante wählen</li>
+          <li>Proportionen des Logos erhalten</li>
+          <li>Ausreichend Weißraum rund ums Logo lassen</li>
+          <li>Datei aus dem offiziellen Ordner verwenden</li>
+        </ul>
+      </div>
+      <div class="dont-card">
+        <div class="dont-card-label">✗ Nicht erlaubt</div>
+        <ul>
+          <li>Logo verzerren oder drehen</li>
+          <li>Farben des Logos verändern</li>
+          <li>Logo auf unpassendem Hintergrund platzieren</li>
+          <li>Logo freistellen oder Elemente entfernen</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 4. ABSTÄNDE ────────────────────────────────────────── -->
+  <section class="ds-section" id="spacing">
+    <div class="ds-section-label">04 — Abstände</div>
+    <h2 class="ds-section-title">Spacing-System</h2>
+    <p class="ds-section-desc">Alle Abstände basieren auf einem <strong>4px-Raster</strong>. Konsistente Verwendung sorgt für ein ruhiges, professionelles Layout.</p>
+    <div class="ds-divider"></div>
+
+    <div class="spacing-grid">
+      <div class="spacing-row">
+        <div class="spacing-label">--space-1</div>
+        <div class="spacing-bar-wrap">
+          <div class="spacing-bar" style="width:4px;"></div>
+          <div class="spacing-value">4px — Mikro-Abstand, Inline-Gaps</div>
+        </div>
+      </div>
+      <div class="spacing-row">
+        <div class="spacing-label">--space-2</div>
+        <div class="spacing-bar-wrap">
+          <div class="spacing-bar" style="width:8px;"></div>
+          <div class="spacing-value">8px — Icon-Text-Abstand</div>
+        </div>
+      </div>
+      <div class="spacing-row">
+        <div class="spacing-label">--space-3</div>
+        <div class="spacing-bar-wrap">
+          <div class="spacing-bar" style="width:12px;"></div>
+          <div class="spacing-value">12px — Innen-Padding klein</div>
+        </div>
+      </div>
+      <div class="spacing-row">
+        <div class="spacing-label">--space-4</div>
+        <div class="spacing-bar-wrap">
+          <div class="spacing-bar" style="width:16px;"></div>
+          <div class="spacing-value">16px — Standard-Padding</div>
+        </div>
+      </div>
+      <div class="spacing-row">
+        <div class="spacing-label">--space-6</div>
+        <div class="spacing-bar-wrap">
+          <div class="spacing-bar" style="width:24px;"></div>
+          <div class="spacing-value">24px — Karten-Padding</div>
+        </div>
+      </div>
+      <div class="spacing-row">
+        <div class="spacing-label">--space-8</div>
+        <div class="spacing-bar-wrap">
+          <div class="spacing-bar" style="width:32px;"></div>
+          <div class="spacing-value">32px — Abschnitt-Abstand klein</div>
+        </div>
+      </div>
+      <div class="spacing-row">
+        <div class="spacing-label">--space-12</div>
+        <div class="spacing-bar-wrap">
+          <div class="spacing-bar" style="width:48px;"></div>
+          <div class="spacing-value">48px — Abschnitt-Abstand mittel</div>
+        </div>
+      </div>
+      <div class="spacing-row">
+        <div class="spacing-label">--space-16</div>
+        <div class="spacing-bar-wrap">
+          <div class="spacing-bar" style="width:64px;"></div>
+          <div class="spacing-value">64px — Seiten-Padding</div>
+        </div>
+      </div>
+      <div class="spacing-row">
+        <div class="spacing-label">--space-20</div>
+        <div class="spacing-bar-wrap">
+          <div class="spacing-bar" style="width:80px;"></div>
+          <div class="spacing-value">80px — Hero / große Sektionen</div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <p style="font-size:var(--text-sm);color:var(--color-anthrazit-80);">
+      <strong>Border Radius:</strong> &nbsp;
+      <code style="background:#eef0f2;padding:2px 6px;border-radius:3px;font-size:12px;">4px</code> Buttons &amp; Badges &nbsp;·&nbsp;
+      <code style="background:#eef0f2;padding:2px 6px;border-radius:3px;font-size:12px;">10px</code> Karten &nbsp;·&nbsp;
+      <code style="background:#eef0f2;padding:2px 6px;border-radius:3px;font-size:12px;">20px</code> Große Karten &nbsp;·&nbsp;
+      <code style="background:#eef0f2;padding:2px 6px;border-radius:3px;font-size:12px;">50%</code> Kreise / Avatare
+    </p>
+  </section>
+
+  <!-- ── 5. KOMPONENTEN ─────────────────────────────────────── -->
+  <section class="ds-section" id="components">
+    <div class="ds-section-label">05 — Komponenten</div>
+    <h2 class="ds-section-title">UI-Elemente</h2>
+    <p class="ds-section-desc">Wiederverwendbare Bausteine der Website und Materialien — konsistent nach Farb- und Typo-System.</p>
+    <div class="ds-divider"></div>
+
+    <!-- Buttons -->
+    <h3 style="font-size:var(--text-md);font-weight:600;margin-bottom:var(--space-4);">Buttons</h3>
+    <div class="component-row" style="margin-bottom:var(--space-8);">
+      <a class="btn btn-primary" href="#">Primär</a>
+      <a class="btn btn-secondary" href="#">Sekundär</a>
+      <a class="btn btn-dark" href="#">Dunkel</a>
+      <a class="btn btn-accent" href="#">Akzent</a>
+      <a class="btn btn-primary btn-sm" href="#">Klein</a>
+      <a class="btn btn-primary btn-lg" href="#">Groß</a>
+    </div>
+
+    <!-- Badges -->
+    <h3 style="font-size:var(--text-md);font-weight:600;margin-bottom:var(--space-4);">Badges &amp; Labels</h3>
+    <div class="component-row" style="margin-bottom:var(--space-8);">
+      <span class="badge badge-teal">Agile Methoden</span>
+      <span class="badge badge-dark">Consulting</span>
+      <span class="badge badge-accent">Neu</span>
+      <span class="badge badge-outline">Online</span>
+    </div>
+
+    <!-- Cards -->
+    <h3 style="font-size:var(--text-md);font-weight:600;margin-bottom:var(--space-4);">Karten</h3>
+    <div class="card-grid">
+      <div class="card card-accent">
+        <div class="card-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <div class="card-title">Agiler Coach</div>
+        <div class="card-body">Begleitung von Teams und Organisationen in agilen Transformationsprozessen.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div class="card-title">Agile Ausbildungen</div>
+        <div class="card-body">Zertifizierte Programme für Coaches, Trainer und Moderatoren.</div>
+      </div>
+
+      <div class="card card-dark">
+        <div class="card-icon">
+          <svg width="24" height="24" fill="none" stroke="#14b4be" stroke-width="2" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <div class="card-title">Transformation</div>
+        <div class="card-body">Strategische Begleitung von Veränderungsprozessen in Unternehmen.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 6. TONALITÄT ───────────────────────────────────────── -->
+  <section class="ds-section" id="tone">
+    <div class="ds-section-label">06 — Tonalität &amp; Stil</div>
+    <h2 class="ds-section-title">Markenstimme</h2>
+    <p class="ds-section-desc">Die visuelle Sprache spiegelt die Werte der Marke: Klarheit, Bewegung, Menschlichkeit und professionelle Tiefe.</p>
+    <div class="ds-divider"></div>
+
+    <div class="illus-grid">
+      <div class="illus-card">
+        <div class="illus-card-icon">💡</div>
+        <div class="illus-card-title">Klar &amp; direkt</div>
+        <div class="illus-card-desc">Komplexe Inhalte werden einfach und verständlich vermittelt. Kein Fachjargon ohne Erklärung.</div>
+      </div>
+      <div class="illus-card">
+        <div class="illus-card-icon">🌀</div>
+        <div class="illus-card-title">Dynamisch</div>
+        <div class="illus-card-desc">Die Marke ist in Bewegung — das spiegeln Illustrationen, Pfeile und runde Formen wider.</div>
+      </div>
+      <div class="illus-card">
+        <div class="illus-card-icon">🤝</div>
+        <div class="illus-card-title">Menschlich</div>
+        <div class="illus-card-desc">Echte Fotos aus Workshops, persönliche Tonalität, Augenhöhe mit dem Gegenüber.</div>
+      </div>
+      <div class="illus-card">
+        <div class="illus-card-icon">📐</div>
+        <div class="illus-card-title">Strukturiert</div>
+        <div class="illus-card-desc">Canvas, Boards und Modelle folgen klaren Rastern — inhaltliche Tiefe mit Ordnung.</div>
+      </div>
+      <div class="illus-card">
+        <div class="illus-card-icon">🎨</div>
+        <div class="illus-card-title">Illustrativ</div>
+        <div class="illus-card-desc">Eigene Illustrationen in Türkis/Anthrazit mit organischen Formen — konsistenter Stil über alle Materialien.</div>
+      </div>
+      <div class="illus-card">
+        <div class="illus-card-icon">🏆</div>
+        <div class="illus-card-title">Kompetent</div>
+        <div class="illus-card-desc">Tiefes Fachwissen in Agilität — die Marke positioniert sich als führende Expertin im DACH-Raum.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 7. ASSETS ──────────────────────────────────────────── -->
+  <section class="ds-section" id="assets">
+    <div class="ds-section-label">07 — Asset-Inventar</div>
+    <h2 class="ds-section-title">Vorhandene Dateien</h2>
+    <p class="ds-section-desc">Alle Materialien liegen im Ordner <em>Grafiken neu sortiert</em> — hier eine strukturierte Übersicht nach Kategorie.</p>
+    <div class="ds-divider"></div>
+
+    <div class="asset-grid">
+
+      <div class="asset-card">
+        <div class="asset-card-header">
+          <div class="asset-card-icon dark">🏷️</div>
+          <div class="asset-card-name">Marke &amp; Design</div>
+        </div>
+        <div class="asset-card-body">
+          Logo-Varianten (PNG + PDF), Farbdokumentation, Schriftdateien Basier Circle &amp; Basier Circle Narrow (je 8 Schnitte als .otf)
+          <br><span class="asset-count">Logo: 5 Varianten · Font: 16 Dateien</span>
+        </div>
+      </div>
+
+      <div class="asset-card">
+        <div class="asset-card-header">
+          <div class="asset-card-icon teal">📗</div>
+          <div class="asset-card-name">E-Books (Neues Design)</div>
+        </div>
+        <div class="asset-card-body">
+          Agile Methoden, Agile Meetings, Agile Führung, Agile Mindset, Retrospektiven, Transformationsmodelle, Team-Modelle u.v.m.
+          <br><span class="asset-count">12 PDFs</span>
+        </div>
+      </div>
+
+      <div class="asset-card">
+        <div class="asset-card-header">
+          <div class="asset-card-icon teal">🖼️</div>
+          <div class="asset-card-name">Grafiken &amp; Illustrationen</div>
+        </div>
+        <div class="asset-card-body">
+          Agile-Framework-Modelle, Canvas &amp; Stakeholder Maps, Scrum/Sprint-Vorlagen, OKR-Zyklus, Führung &amp; Transformation, Coaching-Modelle, Szenen
+          <br><span class="asset-count">Mehrere Hundert Dateien</span>
+        </div>
+      </div>
+
+      <div class="asset-card">
+        <div class="asset-card-header">
+          <div class="asset-card-icon orange">🃏</div>
+          <div class="asset-card-name">Druckvorlagen &amp; Karten</div>
+        </div>
+        <div class="asset-card-body">
+          Coaching-Karten, Delegation Poker, Planning Poker, Rollenkarten (Funktional, Meeting, Vertrieb, Trainer), Aufsteller
+          <br><span class="asset-count">5 Kategorien</span>
+        </div>
+      </div>
+
+      <div class="asset-card">
+        <div class="asset-card-header">
+          <div class="asset-card-icon dark">📸</div>
+          <div class="asset-card-name">Fotos</div>
+        </div>
+        <div class="asset-card-body">
+          Claudia-Portraits (professionell überarbeitet), Website-Bilder 2023, Workshop-Fotos (Anna, Jason), Fotos Lana &amp; Luis
+          <br><span class="asset-count">7 Ordner</span>
+        </div>
+      </div>
+
+      <div class="asset-card">
+        <div class="asset-card-header">
+          <div class="asset-card-icon teal">📱</div>
+          <div class="asset-card-name">Social Media &amp; Web</div>
+        </div>
+        <div class="asset-card-body">
+          LinkedIn Event-Banner (ab 01/2024), XING-Collagen &amp; Icons, Website-Collagen für Workshops, fertige Social-Media-Vorlagen
+          <br><span class="asset-count">4 Kategorien</span>
+        </div>
+      </div>
+
+      <div class="asset-card">
+        <div class="asset-card-header">
+          <div class="asset-card-icon orange">🔤</div>
+          <div class="asset-card-name">Icons Webseite</div>
+        </div>
+        <div class="asset-card-body">
+          Custom PNGs für alle Ausbildungsformate — Agiler Coach, Trainer, Moderator, Vertriebscoach, Design Thinking Facilitator u.a.
+          <br><span class="asset-count">20+ Icons</span>
+        </div>
+      </div>
+
+      <div class="asset-card">
+        <div class="asset-card-header">
+          <div class="asset-card-icon dark">🃏</div>
+          <div class="asset-card-name">Workshop-Boards &amp; PDFs</div>
+        </div>
+        <div class="asset-card-body">
+          Mural-Boards, Flip-Chart-Fotos, Retro-Grafiken, Sprint-Methoden-PDFs, Methoden-Kompakt-Formate für Präsenztraining
+          <br><span class="asset-count">6 Kategorien · 45+ PDFs</span>
+        </div>
+      </div>
+
+      <div class="asset-card">
+        <div class="asset-card-header">
+          <div class="asset-card-icon teal">🌍</div>
+          <div class="asset-card-name">Englische Materialien</div>
+        </div>
+        <div class="asset-card-body">
+          Canvas &amp; Boards, E-Books (Agile Meetings Toolbox, Agile Methods &amp; Impulses), Frameworks, Skripte, SCRUM Cheat Sheet
+          <br><span class="asset-count">10+ Kategorien</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── 8. TOKENS ──────────────────────────────────────────── -->
+  <section class="ds-section" id="tokens">
+    <div class="ds-section-label">08 — Design Tokens</div>
+    <h2 class="ds-section-title">CSS-Variablen Referenz</h2>
+    <p class="ds-section-desc">Kopierfertige Token-Definitionen für Web-Entwicklung. In die CSS-Root-Variable der Website einfügen.</p>
+    <div class="ds-divider"></div>
+
+    <table class="token-table">
+      <thead>
+        <tr>
+          <th>Token</th>
+          <th>Wert</th>
+          <th>Beschreibung</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td colspan="3" style="background:#f7f8f9;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#5c626a;padding:8px 20px;">Farben</td></tr>
+        <tr>
+          <td class="token-name">--color-anthrazit</td>
+          <td class="token-value"><span class="color-dot" style="background:#333a45;"></span>#333a45</td>
+          <td style="font-size:13px;color:#5c626a;">Primärfarbe, Texte, dunkle Bereiche</td>
+        </tr>
+        <tr>
+          <td class="token-name">--color-tuerkis</td>
+          <td class="token-value"><span class="color-dot" style="background:#14b4be;"></span>#14b4be</td>
+          <td style="font-size:13px;color:#5c626a;">Markenfarbe, CTAs, Akzente</td>
+        </tr>
+        <tr>
+          <td class="token-name">--color-orange-rot</td>
+          <td class="token-value"><span class="color-dot" style="background:#fc551e;"></span>#fc551e</td>
+          <td style="font-size:13px;color:#5c626a;">Akzentfarbe, Highlights, Neuigkeiten</td>
+        </tr>
+        <tr>
+          <td class="token-name">--color-anthrazit-80</td>
+          <td class="token-value"><span class="color-dot" style="background:#5c626a;"></span>#5c626a</td>
+          <td style="font-size:13px;color:#5c626a;">Sekundärtext, Icons, Trennlinien</td>
+        </tr>
+        <tr>
+          <td class="token-name">--color-tuerkis-80</td>
+          <td class="token-value"><span class="color-dot" style="background:#43c3cb;"></span>#43c3cb</td>
+          <td style="font-size:13px;color:#5c626a;">Türkis-Variante für Hintergründe</td>
+        </tr>
+        <tr>
+          <td class="token-name">--color-tuerkis-50</td>
+          <td class="token-value"><span class="color-dot" style="background:#8adadf;"></span>#8adadf</td>
+          <td style="font-size:13px;color:#5c626a;">Helle Tinte, dezente Hintergründe</td>
+        </tr>
+        <tr><td colspan="3" style="background:#f7f8f9;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#5c626a;padding:8px 20px;">Typografie</td></tr>
+        <tr>
+          <td class="token-name">--font-primary</td>
+          <td class="token-value">'Basier Circle', Arial, sans-serif</td>
+          <td style="font-size:13px;color:#5c626a;">Einzige Schriftfamilie</td>
+        </tr>
+        <tr>
+          <td class="token-name">--font-weight-regular</td>
+          <td class="token-value">400</td>
+          <td style="font-size:13px;color:#5c626a;">Fließtext</td>
+        </tr>
+        <tr>
+          <td class="token-name">--font-weight-semibold</td>
+          <td class="token-value">600</td>
+          <td style="font-size:13px;color:#5c626a;">Überschriften &amp; Highlights</td>
+        </tr>
+        <tr><td colspan="3" style="background:#f7f8f9;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#5c626a;padding:8px 20px;">Abstände</td></tr>
+        <tr>
+          <td class="token-name">--space-4</td>
+          <td class="token-value">16px</td>
+          <td style="font-size:13px;color:#5c626a;">Standard-Padding</td>
+        </tr>
+        <tr>
+          <td class="token-name">--space-6</td>
+          <td class="token-value">24px</td>
+          <td style="font-size:13px;color:#5c626a;">Karten-Padding</td>
+        </tr>
+        <tr>
+          <td class="token-name">--space-12</td>
+          <td class="token-value">48px</td>
+          <td style="font-size:13px;color:#5c626a;">Abschnitts-Abstand</td>
+        </tr>
+        <tr><td colspan="3" style="background:#f7f8f9;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#5c626a;padding:8px 20px;">Border Radius</td></tr>
+        <tr>
+          <td class="token-name">--radius-sm</td>
+          <td class="token-value">4px</td>
+          <td style="font-size:13px;color:#5c626a;">Buttons, Badges</td>
+        </tr>
+        <tr>
+          <td class="token-name">--radius-md</td>
+          <td class="token-value">10px</td>
+          <td style="font-size:13px;color:#5c626a;">Karten</td>
+        </tr>
+        <tr>
+          <td class="token-name">--radius-lg</td>
+          <td class="token-value">20px</td>
+          <td style="font-size:13px;color:#5c626a;">Große Karten</td>
+        </tr>
+        <tr>
+          <td class="token-name">--radius-full</td>
+          <td class="token-value">50%</td>
+          <td style="font-size:13px;color:#5c626a;">Kreise, Avatare</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+</main>
+
+<!-- ═══ FOOTER ════════════════════════════════════════════════ -->
+<footer class="ds-footer">
+  <strong>Claudia Thonet Agile Consulting GmbH</strong> — Design System<br>
+  Basierend auf: Farben_Schriften_Logovarianten.pdf · Website claudiathonet.de · Stand 2024<br>
+  Erstellt mit Claude Cowork · April 2026
+</footer>
+
+</body>
+</html>

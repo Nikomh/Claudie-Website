@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design System — Claudia Thonet Agile Consulting GmbH</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --anthrazit:     #333a45;
+      --tuerkis:       #14b4be;
+      --orange:        #fc551e;
+      --anthrazit-80:  #5c626a;
+      --tuerkis-80:    #43c3cb;
+      --tuerkis-50:    #8adadf;
+      --bg:            #f7f8f9;
+      --border:        #dde0e4;
+      --white:         #ffffff;
+    }
+
+    body {
+      font-family: 'Basier Circle', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--anthrazit);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    .hero {
+      background: var(--anthrazit);
+      padding: 64px 48px 56px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      right: -80px;
+      top: -80px;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(20,180,190,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--tuerkis-50);
+      margin-bottom: 16px;
+    }
+
+    .hero-title {
+      font-size: 48px;
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    .hero-title span { color: var(--tuerkis); }
+
+    .hero-sub {
+      font-size: 18px;
+      color: rgba(255,255,255,0.6);
+      max-width: 520px;
+      margin-bottom: 40px;
+    }
+
+    .hero-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .hero-chip {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.8);
+      font-size: 13px;
+      padding: 4px 14px;
+      border-radius: 99px;
+    }
+
+    /* ── Quick Color Bar ── */
+    .color-bar {
+      display: flex;
+      height: 6px;
+    }
+
+    .color-bar div { flex: 1; }
+
+    /* ── Main ── */
+    .main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 56px 48px 80px;
+    }
+
+    /* ── Section heading ── */
+    .section-heading {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--tuerkis);
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ── Cards grid ── */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      text-decoration: none;
+      color: inherit;
+      transition: box-shadow 0.15s, transform 0.15s;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .card:hover {
+      box-shadow: 0 6px 20px rgba(51,58,69,0.10);
+      transform: translateY(-2px);
+    }
+
+    .card-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+
+    .card-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--anthrazit);
+    }
+
+    .card-desc {
+      font-size: 13px;
+      color: var(--anthrazit-80);
+      line-height: 1.5;
+      flex: 1;
+    }
+
+    .card-count {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--tuerkis);
+      letter-spacing: 0.05em;
+    }
+
+    .card-arrow {
+      font-size: 18px;
+      color: var(--border);
+      align-self: flex-end;
+      transition: color 0.15s;
+    }
+
+    .card:hover .card-arrow { color: var(--tuerkis); }
+
+    /* ── Palette preview ── */
+    .palette {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+
+    .swatch {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .swatch-block {
+      width: 56px;
+      height: 56px;
+      border-radius: 10px;
+      border: 1px solid rgba(0,0,0,0.08);
+    }
+
+    .swatch-label {
+      font-size: 10px;
+      color: var(--anthrazit-80);
+      font-family: 'SF Mono', monospace;
+      text-align: center;
+    }
+
+    /* ── Type preview ── */
+    .type-preview {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 32px;
+      margin-bottom: 48px;
+    }
+
+    .type-preview-row {
+      display: flex;
+      align-items: baseline;
+      gap: 20px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .type-preview-row:last-child { border-bottom: none; }
+
+    .type-meta-col {
+      width: 130px;
+      font-size: 11px;
+      color: var(--anthrazit-80);
+      font-family: 'SF Mono', monospace;
+      flex-shrink: 0;
+    }
+
+    /* ── Structure map ── */
+    .file-tree {
+      background: var(--anthrazit);
+      border-radius: 12px;
+      padding: 28px 32px;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 13px;
+      color: rgba(255,255,255,0.7);
+      line-height: 2;
+      margin-bottom: 48px;
+    }
+
+    .file-tree .folder { color: var(--tuerkis); font-weight: 600; }
+    .file-tree .file   { color: rgba(255,255,255,0.55); }
+    .file-tree .note   { color: rgba(255,255,255,0.3); font-style: italic; }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: var(--anthrazit-80);
+      padding: 32px;
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 600px) {
+      .hero  { padding: 40px 24px; }
+      .main  { padding: 40px 24px 60px; }
+      .hero-title { font-size: 32px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══ HERO ══════════════════════════════════════════════════ -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Claudia Thonet Agile Consulting GmbH</div>
+    <h1 class="hero-title">Design<br><span>System</span></h1>
+    <p class="hero-sub">Die zentrale Referenz für Marke, Visuelles, Sprache und Assets — alles an einem Ort.</p>
+    <div class="hero-chips">
+      <span class="hero-chip">190 Assets</span>
+      <span class="hero-chip">Basier Circle</span>
+      <span class="hero-chip">#14b4be Türkis</span>
+      <span class="hero-chip">#333a45 Anthrazit</span>
+      <span class="hero-chip">Stand 2024</span>
+    </div>
+  </div>
+</header>
+
+<div class="color-bar">
+  <div style="background:#333a45;"></div>
+  <div style="background:#14b4be;flex:2;"></div>
+  <div style="background:#43c3cb;"></div>
+  <div style="background:#8adadf;"></div>
+  <div style="background:#fc551e;"></div>
+</div>
+
+<!-- ═══ MAIN ══════════════════════════════════════════════════ -->
+<main class="main">
+
+  <!-- Dokumente -->
+  <div class="section-heading">Dokumente</div>
+  <div class="grid" style="margin-bottom:48px;">
+    <a class="card" href="design-system.html" style="border-top:3px solid #14b4be;">
+      <div class="card-icon" style="background:#e8f7f8;">🎨</div>
+      <div class="card-title">Styleguide</div>
+      <div class="card-desc">Farben, Typografie, Logo, Abstände, Komponenten und CSS-Tokens — interaktive HTML-Referenz.</div>
+      <div class="card-count">design-system.html</div>
+      <div class="card-arrow">→</div>
+    </a>
+    <a class="card" href="Sprachstil.html" style="border-top:3px solid #fc551e;">
+      <div class="card-icon" style="background:#fff0eb;">✍️</div>
+      <div class="card-title">Sprachstil-Guide</div>
+      <div class="card-desc">Markenstimme, Schreibprinzipien, Anrede, Dos &amp; Don'ts — so schreiben wir.</div>
+      <div class="card-count">Sprachstil.html</div>
+      <div class="card-arrow">→</div>
+    </a>
+  </div>
+
+  <!-- Assets -->
+  <div class="section-heading">Asset-Ordner</div>
+  <div class="grid">
+    <a class="card" href="01_Logos/">
+      <div class="card-icon" style="background:#eaebec;">🏷️</div>
+      <div class="card-title">01 — Logos</div>
+      <div class="card-desc">5 Logo-Varianten (PNG) für hell, dunkel und Türkis-Hintergrund. Plus Original-Markendokument PDF.</div>
+      <div class="card-count">6 Dateien</div>
+      <div class="card-arrow">→</div>
+    </a>
+    <a class="card" href="02_Schriften/">
+      <div class="card-icon" style="background:#e8f7f8;">🔤</div>
+      <div class="card-title">02 — Schriften</div>
+      <div class="card-desc">Alle Schnitte von Basier Circle &amp; Basier Circle Narrow als installierbare OTF-Dateien.</div>
+      <div class="card-count">16 Dateien</div>
+      <div class="card-arrow">→</div>
+    </a>
+    <a class="card" href="03_Icons/">
+      <div class="card-icon" style="background:#fff0eb;">🔷</div>
+      <div class="card-title">03 — Icons</div>
+      <div class="card-desc">Custom-Icons für alle Ausbildungsformate (Agiler Coach, Trainer, Moderator, OKR, Führung u.a.) als PNG.</div>
+      <div class="card-count">36 Dateien</div>
+      <div class="card-arrow">→</div>
+    </a>
+    <a class="card" href="04_Illustrationen/">
+      <div class="card-icon" style="background:#e8f7f8;">🖼️</div>
+      <div class="card-title">04 — Illustrationen</div>
+      <div class="card-desc">KI-gestützte Illustrationen (Figuren, Szenen, LinkedIn-Vorlagen) im Claudia-Thonet-Stil.</div>
+      <div class="card-count">68 Dateien</div>
+      <div class="card-arrow">→</div>
+    </a>
+    <a class="card" href="05_Fotos/">
+      <div class="card-icon" style="background:#eaebec;">📸</div>
+      <div class="card-title">05 — Fotos</div>
+      <div class="card-desc">Professionelle Portraits und Workshop-Fotos aus den Shootings 2023/2024 — webseitenbereit.</div>
+      <div class="card-count">41 Dateien</div>
+      <div class="card-arrow">→</div>
+    </a>
+    <a class="card" href="06_Social_Media/">
+      <div class="card-icon" style="background:#fff0eb;">📱</div>
+      <div class="card-title">06 — Social Media</div>
+      <div class="card-desc">LinkedIn Event-Banner (2024) und Website-Collagen für alle Ausbildungsformate.</div>
+      <div class="card-count">22 Dateien</div>
+      <div class="card-arrow">→</div>
+    </a>
+  </div>
+
+  <!-- Farbpalette -->
+  <div class="section-heading">Farbpalette auf einen Blick</div>
+  <div class="palette">
+    <div class="swatch">
+      <div class="swatch-block" style="background:#333a45;"></div>
+      <div class="swatch-label">#333a45<br>Anthrazit</div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-block" style="background:#14b4be;"></div>
+      <div class="swatch-label">#14b4be<br>Türkis</div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-block" style="background:#fc551e;"></div>
+      <div class="swatch-label">#fc551e<br>Orangerot</div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-block" style="background:#5c626a;"></div>
+      <div class="swatch-label">#5c626a<br>Anth. 80%</div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-block" style="background:#43c3cb;"></div>
+      <div class="swatch-label">#43c3cb<br>Türkis 80%</div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-block" style="background:#8adadf;"></div>
+      <div class="swatch-label">#8adadf<br>Türkis 50%</div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-block" style="background:#ffffff; border:1px solid #dde0e4;"></div>
+      <div class="swatch-label">#ffffff<br>Weiß</div>
+    </div>
+  </div>
+
+  <!-- Typografie -->
+  <div class="section-heading">Typografie auf einen Blick</div>
+  <div class="type-preview">
+    <div class="type-preview-row">
+      <div class="type-meta-col">Display · 48px · 600</div>
+      <div style="font-size:48px;font-weight:600;line-height:1;">Agil.</div>
+    </div>
+    <div class="type-preview-row">
+      <div class="type-meta-col">H1 · 36px · 600</div>
+      <div style="font-size:36px;font-weight:600;line-height:1.1;">Agile Ausbildung</div>
+    </div>
+    <div class="type-preview-row">
+      <div class="type-meta-col">H2 · 28px · 600</div>
+      <div style="font-size:28px;font-weight:600;line-height:1.2;">Agiler Coach werden</div>
+    </div>
+    <div class="type-preview-row">
+      <div class="type-meta-col">Body · 16px · 400</div>
+      <div style="font-size:16px;font-weight:400;">Veränderung gemeinsam gestalten — für Teams und Organisationen.</div>
+    </div>
+    <div class="type-preview-row">
+      <div class="type-meta-col">Label · 12px · 600</div>
+      <div style="font-size:12px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#14b4be;">Agile Methoden</div>
+    </div>
+  </div>
+
+  <!-- Ordnerstruktur -->
+  <div class="section-heading">Ordnerstruktur</div>
+  <div class="file-tree">
+    <div><span class="folder">📁 Design System/</span></div>
+    <div>&nbsp;&nbsp;<span class="file">📄 index.html</span> <span class="note">← diese Seite</span></div>
+    <div>&nbsp;&nbsp;<span class="file">📄 design-system.html</span> <span class="note">← interaktiver Styleguide</span></div>
+    <div>&nbsp;&nbsp;<span class="file">📄 Sprachstil.html</span> <span class="note">← Markenstimme &amp; Schreibprinzipien</span></div>
+    <div>&nbsp;&nbsp;<span class="folder">📁 01_Logos/</span> <span class="note">← 5 PNG + 1 PDF</span></div>
+    <div>&nbsp;&nbsp;<span class="folder">📁 02_Schriften/</span> <span class="note">← 16 OTF (Basier Circle + Narrow)</span></div>
+    <div>&nbsp;&nbsp;<span class="folder">📁 03_Icons/</span> <span class="note">← 36 PNG Website-Icons</span></div>
+    <div>&nbsp;&nbsp;<span class="folder">📁 04_Illustrationen/</span> <span class="note">← 68 PNG Figuren &amp; Szenen</span></div>
+    <div>&nbsp;&nbsp;<span class="folder">📁 05_Fotos/</span> <span class="note">← 41 professionelle Fotos</span></div>
+    <div>&nbsp;&nbsp;<span class="folder">📁 06_Social_Media/</span></div>
+    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="folder">📁 LinkedIn_Banner/</span> <span class="note">← 7 Banner 2024</span></div>
+    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="folder">📁 Website_Collagen/</span> <span class="note">← 9 Collagen</span></div>
+  </div>
+
+</main>
+
+<footer>
+  Claudia Thonet Agile Consulting GmbH · Design System · Erstellt April 2026
+</footer>
+
+</body>
+</html>
