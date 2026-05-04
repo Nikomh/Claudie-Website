@@ -38,17 +38,15 @@ export default function ImpressumPage() {
 
           <h2>Registereintrag</h2>
           <p>
-            {/* TODO: Handelsregisternummer eintragen */}
             Eintragung im Handelsregister.<br />
             Registergericht: Amtsgericht Berlin-Charlottenburg<br />
-            Registernummer: <em>TODO: HRB-Nummer eintragen</em>
+            Registernummer: HRB [bitte eintragen]
           </p>
 
           <h2>Umsatzsteuer-ID</h2>
           <p>
-            {/* TODO: USt-IdNr. eintragen */}
             Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG:<br />
-            <em>TODO: USt-IdNr. eintragen</em>
+            [bitte eintragen]
           </p>
 
           <h2>Inhaltlich verantwortlich gemäß § 18 Abs. 2 MStV</h2>

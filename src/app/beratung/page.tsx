@@ -58,7 +58,7 @@ const BERATUNGSFELDER = [
     href: "/beratung/okr-einfuehrung",
     title: "OKR-Einführung & Begleitung",
     description: "OKRs strukturiert einführen und im Alltag verankern — damit Ziele wirklich fokussieren statt Aufwand erzeugen.",
-    icon: "/images/okr-coach/jonny-kohlhaas-okr-coach-ausbildung-claudia-thonet.jpg",
+    icon: "/images/illustrations/CT_SE02_module.png",
     tags: ["Zielklarheit", "OKR-Rhythmus", "Strategieumsetzung"],
   },
   {

@@ -323,7 +323,7 @@ export const homeContent = {
       title: "Von funktionaler Teamarbeit zu High Performance",
       excerpt:
         "Was macht ein gutes Team aus — und vor allem: Was unterscheidet ein funktionierendes Team von einem High-Performing Team?",
-      coverImage: "/images/illustrations/CT_SE02_lines.png",
+      coverImage: "/images/photos/Teamarbeit1_030124.jpg",
       cluster: "Teams",
       readingMin: 9,
     },

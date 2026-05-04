@@ -14,7 +14,7 @@ const data: MasterclassData = {
   duration: "1–2 Tage",
   format: "Präsenz oder Online",
   audience: "Führungskräfte, OKR-Champions, Teams",
-  heroImage: "/images/okr-coach/jonny-kohlhaas-okr-coach-ausbildung-claudia-thonet.jpg",
+  heroImage: "/images/okr-coach/ausbildung-okr-coach-jonny-kohlhaas.png",
   heroImageAlt: "Masterclass OKR in der Praxis",
   nutzen: "Sie verstehen, wie gute OKRs formuliert werden — und warum schlechte OKRs nicht wirken. Sie kennen den OKR-Rhythmus und wissen, welche Formate wirklich gebraucht werden. Und Sie haben ein erstes OKR-Set entwickelt, das Sie direkt einsetzen können.",
   zielgruppe: [

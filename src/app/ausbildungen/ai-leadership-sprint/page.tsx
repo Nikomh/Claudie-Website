@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -891,17 +892,20 @@ export default function AILeadershipSprintPage() {
         <Container>
           <div className="grid gap-10 md:grid-cols-[2fr_3fr] md:gap-16">
             <Reveal>
-              {/* TODO: Replace with <Image src="/images/trainer/nikolay.jpg" ... /> once portrait is available */}
-              <div className="aspect-[4/5] overflow-hidden rounded-[var(--radius-lg)] bg-anthrazit/8 ring-1 ring-anthrazit/10">
-                <div className="flex h-full items-center justify-center text-sm text-anthrazit-80">
-                  [Trainer-Portrait]
-                </div>
+              <div className="relative aspect-[4/5] overflow-hidden rounded-[var(--radius-lg)] bg-anthrazit/8 ring-1 ring-anthrazit/10">
+                <Image
+                  src="/images/trainer/nikolay-huse.png"
+                  alt="Nikolay Huse — AI Transformation Architekt und Partner bei Claudia Thonet & Team"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 40vw"
+                  className="object-cover"
+                />
               </div>
             </Reveal>
             <Reveal delay={100} className="flex flex-col justify-center gap-6">
               <Eyebrow>ÜBER DEN TRAINER</Eyebrow>
               <h2 className="text-3xl font-bold leading-[1.15] tracking-tight text-anthrazit md:text-4xl">
-                Nikolay Claudiathonet — AI Transformation Architekt.
+                Nikolay Huse — AI Transformation Architekt.
               </h2>
               <p className="text-sm font-semibold uppercase tracking-[0.1em] text-tuerkis">
                 Partner bei Claudia Thonet &amp; Team

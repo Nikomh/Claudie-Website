@@ -11,7 +11,7 @@ const data: BeratungsDetail = {
   eyebrow: "Beratung · OKR",
   title: "OKR-Einführung & Begleitung",
   subline: "OKRs sind kein Selbstzweck. Richtig eingeführt schaffen sie Fokus, verbinden Strategie mit Alltag und stärken eigenverantwortliches Arbeiten. Falsch eingeführt erzeugen sie nur Aufwand.",
-  heroImage: "/images/okr-coach/jonny-kohlhaas-okr-coach-ausbildung-claudia-thonet.jpg",
+  heroImage: "/images/okr-coach/ausbildung-okr-coach-jonny-kohlhaas.png",
   heroImageAlt: "OKR-Einführung — Jonny Kohlhaas Claudia Thonet",
   ausgangslagen: [
     { title: "Ziele sind zu viele und zu unklar", body: "Jede Abteilung hat ihre eigene Prioritätenliste. Es gibt keine gemeinsame Richtung, keine erkennbare Verbindung zwischen Strategie und Tagesgeschäft." },

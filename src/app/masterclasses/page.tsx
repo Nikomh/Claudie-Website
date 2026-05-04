@@ -77,7 +77,7 @@ const MASTERCLASSES = [
     format: "Präsenz oder Online",
     audience: "Führungskräfte, OKR-Champions",
     icon: "/images/illustrations/CT_SE02_module.png",
-    photo: "/images/okr-coach/jonny-kohlhaas-okr-coach-ausbildung-claudia-thonet.jpg",
+    photo: "/images/okr-coach/ausbildung-okr-coach-jonny-kohlhaas.png",
     tag: "OKR",
     tagColor: "bg-tuerkis/10 text-tuerkis",
   },

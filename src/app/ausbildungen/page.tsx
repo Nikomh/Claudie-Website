@@ -50,7 +50,7 @@ const AUSBILDUNGEN = [
     duration: "3 Tage",
     badge: "BDVT + ECA",
     icon: "/images/icons/agile-methoden-kompakt-online-kurs-claudia-thonet-coaching-training-icon.png",
-    photo: "/images/okr-coach/jonny-kohlhaas-okr-coach-ausbildung-claudia-thonet.jpg",
+    photo: "/images/okr-coach/ausbildung-okr-coach-jonny-kohlhaas.png",
     highlights: ["3 intensive Tage", "Mit Jonny Kohlhaas", "OKR-Zertifizierung"],
     featured: false,
   },
@@ -59,8 +59,8 @@ const AUSBILDUNGEN = [
     title: "Agile Führung Ausbildung",
     subtitle: "Führungskräfte entwickeln",
     description: "Führung im agilen Kontext — Rahmen gestalten, Selbstorganisation ermöglichen, Sinn vermitteln.",
-    hours: "TODO",
-    duration: "TODO",
+    hours: "3 Tage",
+    duration: "3 Tage",
     badge: "BDVT-Zertifiziert",
     icon: "/images/icons/agile-fuehrung-training-coaching-fuer-agile-transformative-fuehrung-claudia-thonet-icon-transparent.png",
     photo: "/images/agile-fuehrung/claudia-thonet-beraet-zum-thema-agile-fuehrung.jpg",
@@ -72,11 +72,11 @@ const AUSBILDUNGEN = [
     title: "Agiler Vertriebscoach",
     subtitle: "Vertrieb transformieren",
     description: "Vertriebsteams agil entwickeln — kundenorientiert, iterativ, wirksam.",
-    hours: "TODO",
-    duration: "TODO",
-    badge: "Zertifiziert",
+    hours: "60+",
+    duration: "3 Module",
+    badge: "BDVT-Zertifiziert",
     icon: "/images/icons/ausbildung-agiler-vertriebscoach-claudia-thonet-coaching-training-icon-transparent.png",
-    photo: null,
+    photo: "/images/photos/Moderation-Action1_030124.jpg",
     highlights: ["Für Vertriebscoaches", "Agile Methoden", "Inhouse buchbar"],
     featured: false,
   },
@@ -85,11 +85,11 @@ const AUSBILDUNGEN = [
     title: "Kommunikationstrainerin",
     subtitle: "Kommunikation & Coaching",
     description: "Professionell als Kommunikationstrainerin auftreten — mit Tiefe, Methodik und Zertifikat.",
-    hours: "TODO",
-    duration: "TODO",
-    badge: "Zertifiziert",
+    hours: "50+",
+    duration: "3 Module",
+    badge: "BDVT-Zertifiziert",
     icon: "/images/icons/ausbildung-weiterbildung-agiler-trainer-claudia-thonet-coaching-training-icon-transparent.png",
-    photo: null,
+    photo: "/images/photos/Weiterbildung_Moderation_Claudia_Thonet_10_25_2.jpg",
     highlights: ["Kommunikation", "Coaching-Ansatz", "Zertifikat"],
     featured: false,
   },
@@ -225,7 +225,7 @@ export default function AusbildungenOverviewPage() {
                   <div className="flex flex-wrap gap-4">
                     <div className="flex items-center gap-2 text-sm text-anthrazit-80">
                       <Clock className="h-4 w-4 text-tuerkis" aria-hidden />
-                      {a.hours} Stunden
+                      {a.hours} {!a.hours.includes("Tag") ? "Stunden" : ""}
                     </div>
                     <div className="flex items-center gap-2 text-sm text-anthrazit-80">
                       <Award className="h-4 w-4 text-tuerkis" aria-hidden />
@@ -274,7 +274,7 @@ export default function AusbildungenOverviewPage() {
                     <div className="flex items-center gap-4 border-t border-border pt-3">
                       <span className="flex items-center gap-1.5 text-xs text-anthrazit-80">
                         <Clock className="h-3.5 w-3.5 text-tuerkis" aria-hidden />
-                        {a.hours} Std.
+                        {a.hours}{!a.hours.includes("Tag") ? " Std." : ""}
                       </span>
                       <span className="flex items-center gap-1.5 text-xs text-anthrazit-80">
                         <Users className="h-3.5 w-3.5 text-tuerkis" aria-hidden />

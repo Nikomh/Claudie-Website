@@ -35,8 +35,7 @@ export default function AGBPage() {
 
           <h2>§ 4 Preise und Zahlung</h2>
           <p>
-            {/* TODO: Preisdetails und Zahlungskonditionen einfügen */}
-            <em>TODO: Preise, Zahlungsbedingungen und Fälligkeit hier ergänzen.</em>
+            Die jeweiligen Preise für Seminare, Ausbildungen und Beratungsleistungen werden im Einzelvertrag oder auf der Website angegeben. Die Rechnungsstellung erfolgt nach Vertragsschluss. Der Rechnungsbetrag ist innerhalb von 14 Tagen nach Rechnungsdatum ohne Abzug fällig.
           </p>
           <p>
             Alle angegebenen Preise verstehen sich zzgl. der gesetzlichen Umsatzsteuer, sofern nicht anders angegeben.
@@ -44,8 +43,7 @@ export default function AGBPage() {
 
           <h2>§ 5 Stornierung durch den Auftraggeber</h2>
           <p>
-            {/* TODO: Stornierungsfristen und -konditionen einfügen */}
-            <em>TODO: Stornierungsregelungen hier ergänzen.</em>
+            Eine Stornierung der Anmeldung ist bis 4 Wochen vor Veranstaltungsbeginn kostenfrei möglich. Bei Stornierung bis 2 Wochen vor Veranstaltungsbeginn werden 50 % der Teilnahmegebühr fällig. Bei späteren Absagen oder Nichterscheinen wird die volle Teilnahmegebühr berechnet. Es besteht jederzeit die Möglichkeit, eine Ersatzperson zu benennen.
           </p>
 
           <h2>§ 6 Absage oder Verschiebung durch den Anbieter</h2>

@@ -8,45 +8,45 @@ import { Section } from "@/components/ui/Section";
 
 const FEATURED = [
   {
-    href: "/agile-ausbildungen/agiler-coach",
-    label: "Flagship",
-    labelColor: "bg-tuerkis text-white",
-    title: "Agile Coach Ausbildung",
-    badge: "BDVT-Zertifiziert",
-    hours: "100+ Stunden",
-    format: "5 Module",
-    group: "< 14 Personen",
-    photo: "/images/agiler-coach/claudia-thonet-leitet-die-ausbildung-zum-agilen-coach.jpg",
-    icon: "/images/icons/ausbildung-agiler-coach-claudia-thonet-coaching-training-icon-transparent.png",
-    description: "Die umfassendste agile Ausbildung — mit 5 Expert:innen, Supervision und echten Praxisprojekten. BDVT-anerkannt, Bildungsurlaub in Berlin.",
+    href: "/ausbildungen/ai-leadership-sprint",
+    label: "Neu",
+    labelColor: "bg-orange-rot text-white",
+    title: "AI Leadership Sprint",
+    badge: "KI-Kompetenz",
+    hours: "2 Tage",
+    format: "Online-Sprint",
+    group: "< 16 Personen",
+    photo: "/images/photos/Master_Class_Claudia_Thonet.jpg",
+    icon: "/images/illustrations/CT_Laptop3Star_v2.png",
+    description: "In zwei intensiven Tagen von KI-Skepsis zu KI-Kompetenz — mit konkreten Tools, Live-Demos und einem persönlichen AI-Aktionsplan.",
     highlight: true,
   },
   {
-    href: "/agile-ausbildungen/agiler-facilitator",
+    href: "/beratung/teamentwicklung",
     label: "Beliebt",
     labelColor: "bg-anthrazit text-white",
-    title: "Agile Facilitator Ausbildung",
-    badge: "BDVT-Zertifiziert",
-    hours: "50+ Stunden",
-    format: "3 Module",
+    title: "High-Performing Teams",
+    badge: "Masterclass",
+    hours: "2–3 Tage",
+    format: "Präsenz & Online",
     group: "< 14 Personen",
-    photo: "/images/agiler-facilitator/claudia-thonet-im-trainng-zu-agilen-werten-11-23.jpg",
-    icon: "/images/icons/ausbildung-agiler-moderator-claudia-thonet-coaching-training-icon-transparent.png",
-    description: "Workshops gestalten, Meetings transformieren, Formate entwickeln — 50+ Stunden praxisnahes Training.",
+    photo: "/images/photos/Teamarbeit1_030124.jpg",
+    icon: "/images/illustrations/SE02_EP01_team.png",
+    description: "Was echte Hochleistungsteams von funktionierenden unterscheidet — und wie du hybride Teams in High Performer verwandelst.",
     highlight: false,
   },
   {
-    href: "/agile-ausbildungen/okr-coach",
+    href: "/agile-ausbildungen/veraenderung-gestalten",
     label: "Intensiv",
-    labelColor: "bg-orange-rot text-white",
-    title: "OKR Coach Ausbildung",
-    badge: "BDVT + ECA",
-    hours: "25 Stunden",
-    format: "3 Tage",
-    group: "< 12 Personen",
-    photo: "/images/okr-coach/jonny-kohlhaas-okr-coach-ausbildung-claudia-thonet.jpg",
-    icon: "/images/agiler-facilitator/claudia_thonet_agiler_facilitator_50_stunden_icon.png",
-    description: "Strategie in Ergebnisse überführen — OKRs einführen, coachen und nachhaltig verankern. In 3 intensiven Tagen.",
+    labelColor: "bg-tuerkis text-white",
+    title: "Veränderung gestalten",
+    badge: "BDVT-Zertifiziert",
+    hours: "3 Module",
+    format: "Präsenz",
+    group: "< 14 Personen",
+    photo: "/images/veraenderung-gestalten/Veraenderung_gestalten_Claudia_Thonet.jpg",
+    icon: "/images/illustrations/CT_SE02_steps.png",
+    description: "Change wirklich gestalten — mit Haltung, Methoden und einem Repertoire, das Veränderungsprozesse nachhaltig verankert.",
     highlight: false,
   },
 ];
@@ -58,16 +58,16 @@ export function FeaturedAusbildungen() {
         <Reveal>
           <div className="mb-10 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
             <div>
-              <Eyebrow>Zertifizierte Ausbildungen</Eyebrow>
+              <Eyebrow>Neue Formate & Highlights</Eyebrow>
               <h2 className="mt-2 text-2xl font-bold text-anthrazit md:text-3xl">
-                Die drei meistgebuchten Formate
+                Unsere drei neuen Formate
               </h2>
             </div>
             <Link
               href="/ausbildungen"
               className="inline-flex items-center gap-1.5 self-start text-sm font-semibold text-tuerkis hover:underline md:self-end"
             >
-              Alle Ausbildungen ansehen <ArrowRight className="h-4 w-4" aria-hidden />
+              Alle Formate ansehen <ArrowRight className="h-4 w-4" aria-hidden />
             </Link>
           </div>
         </Reveal>

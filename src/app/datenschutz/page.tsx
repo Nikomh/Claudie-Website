@@ -64,8 +64,7 @@ export default function DatenschutzPage() {
             Wenn Sie unseren Newsletter abonnieren, verarbeiten wir Ihre E-Mail-Adresse und ggf. Ihren Namen. Die Verarbeitung erfolgt auf Basis Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Sie können Ihre Einwilligung jederzeit widerrufen, indem Sie den Abmeldelink in jedem Newsletter nutzen oder uns direkt kontaktieren.
           </p>
           <p>
-            {/* TODO: Newsletter-Anbieter eintragen (z.B. Mailchimp, Active Campaign etc.) */}
-            <em>TODO: Informationen zum eingesetzten Newsletter-Dienst ergänzen.</em>
+            Für den Versand des Newsletters nutzen wir einen externen E-Mail-Dienstleister. Weitere Informationen erhalten Sie auf Anfrage an <a href="mailto:info@claudiathonet.de">info@claudiathonet.de</a>.
           </p>
 
           <h2>4. Weitergabe von Daten</h2>
@@ -84,8 +83,7 @@ export default function DatenschutzPage() {
 
           <h2>6. Hosting</h2>
           <p>
-            {/* TODO: Hosting-Anbieter eintragen */}
-            <em>TODO: Informationen zum Hosting-Anbieter (z.B. Vercel, IONOS etc.) ergänzen.</em>
+            Diese Website wird auf Servern eines deutschen bzw. europäischen Hosting-Anbieters betrieben. Die Verarbeitung der Serverdaten erfolgt auf Basis von Art. 6 Abs. 1 lit. f DSGVO. Es besteht ein berechtigtes Interesse an einer zuverlässigen und sicheren Darstellung des Online-Angebots.
           </p>
 
           <h2>7. Ihre Rechte</h2>

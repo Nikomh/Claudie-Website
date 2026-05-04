@@ -24,7 +24,7 @@ const COOKIE_CATEGORIES = [
     required: false,
     description: "Diese Cookies helfen uns zu verstehen, wie Besuchende die Website nutzen. Alle Daten werden anonymisiert erhoben.",
     cookies: [
-      { name: "TODO", purpose: "TODO: Analyse-Tool eintragen", duration: "TODO" },
+      { name: "—", purpose: "Derzeit keine Analyse-Cookies aktiv", duration: "—" },
     ],
   },
   {
@@ -32,7 +32,7 @@ const COOKIE_CATEGORIES = [
     required: false,
     description: "Diese Cookies werden verwendet, um Besucher website-übergreifend zu verfolgen. Sie werden eingesetzt, um relevante Werbung anzuzeigen.",
     cookies: [
-      { name: "TODO", purpose: "TODO: Marketing-Tool eintragen", duration: "TODO" },
+      { name: "—", purpose: "Derzeit keine Marketing-Cookies aktiv", duration: "—" },
     ],
   },
 ];
