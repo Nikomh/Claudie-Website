@@ -63,7 +63,7 @@ export function BuecherSection() {
               </div>
 
               <div className="flex flex-col gap-3">
-                {BOOKS.map((book, i) => (
+                {BOOKS.map((book) => (
                   <div key={book.title} className="flex items-start gap-3 rounded-[var(--radius-md)] border border-border bg-white p-4 shadow-sm">
                     <BookOpen className="mt-0.5 h-4 w-4 shrink-0 text-tuerkis" aria-hidden />
                     <div>

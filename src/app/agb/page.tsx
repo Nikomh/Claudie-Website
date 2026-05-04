@@ -20,7 +20,7 @@ export default function AGBPage() {
 
           <h2>§ 1 Geltungsbereich</h2>
           <p>
-            Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge zwischen der Claudia Thonet Agile Consulting GmbH, Ahlbecker Straße 2, 10437 Berlin (nachfolgend „Anbieter"), und den jeweiligen Teilnehmenden oder Auftraggebenden (nachfolgend „Auftraggeber") über die Durchführung von Seminaren, Ausbildungen, Coachings, Beratungsleistungen und sonstigen Trainingsformaten.
+            Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge zwischen der Claudia Thonet Agile Consulting GmbH, Ahlbecker Straße 2, 10437 Berlin (nachfolgend &bdquo;Anbieter&ldquo;), und den jeweiligen Teilnehmenden oder Auftraggebenden (nachfolgend &bdquo;Auftraggeber&ldquo;) über die Durchführung von Seminaren, Ausbildungen, Coachings, Beratungsleistungen und sonstigen Trainingsformaten.
           </p>
 
           <h2>§ 2 Vertragsschluss</h2>

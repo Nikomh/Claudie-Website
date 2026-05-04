@@ -201,7 +201,7 @@ export default function ConsultingOverviewPage() {
               <div className="flex flex-col gap-4">
                 <Eyebrow>Stimmen</Eyebrow>
                 <blockquote className="text-xl font-semibold leading-snug text-anthrazit md:text-2xl">
-                  „Claudia und ihr Team schaffen es, wirklich praxisnah und individuell die Methoden und konkreten Tools für New Work zu vermitteln. Hands on, ohne PowerPoint."
+                  &bdquo;Claudia und ihr Team schaffen es, wirklich praxisnah und individuell die Methoden und konkreten Tools für New Work zu vermitteln. Hands on, ohne PowerPoint.&ldquo;
                 </blockquote>
                 <p className="text-sm text-anthrazit-80">Henrike Karmasin, Commercial Director · Daiichi Sankyo</p>
                 <div className="flex gap-0.5">

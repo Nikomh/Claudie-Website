@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { ArrowRight, X } from "lucide-react";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { cn } from "@/lib/cn";
 
 interface StickyCourseCtaProps {

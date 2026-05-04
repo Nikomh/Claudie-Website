@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, MapPin, CalendarDays, Quote, Star, Phone, Building2 } from "lucide-react";
+import { ArrowRight, CheckCircle2, MapPin, CalendarDays, Quote, Star, Phone } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";

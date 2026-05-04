@@ -117,7 +117,7 @@ export default function VeraenderungGestaltenPage() {
             </div>
             {/* Day badges */}
             <div aria-hidden className="pointer-events-none absolute -bottom-4 -right-5 flex gap-2">
-              {DAY_BADGES.map((badge, i) => (
+              {DAY_BADGES.map((badge) => (
                 <Image key={badge} src={badge} alt="" width={72} height={80} className="drop-shadow-lg" />
               ))}
             </div>

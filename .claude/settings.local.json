@@ -62,7 +62,18 @@
       "Bash(curl -s -o /dev/null -w '%{http_code}' -L http://localhost:3000/__TRACKED_VAR__)",
       "Bash(xargs -I{} sh -c 'echo \"=== {} ===\" && head -5 {}')",
       "Bash(cp \"/Users/nmh/Desktop/Claude Code x Antigravity/Website/Claudia Website Bilder/Main Page/Referenzen/\"*.png \"/Users/nmh/Desktop/Claude Code x Antigravity/Website/public/images/brand-logos/referenzen/\")",
-      "Bash(cp \"/Users/nmh/Desktop/Claude Code x Antigravity/Website/Claudia Website Bilder/Main Page/Bekannt aus/\"*.png \"/Users/nmh/Desktop/Claude Code x Antigravity/Website/public/images/brand-logos/presse/\")"
+      "Bash(cp \"/Users/nmh/Desktop/Claude Code x Antigravity/Website/Claudia Website Bilder/Main Page/Bekannt aus/\"*.png \"/Users/nmh/Desktop/Claude Code x Antigravity/Website/public/images/brand-logos/presse/\")",
+      "Bash(sed -n '203,205p' \"/Users/nmh/Desktop/Claude Code x Antigravity/Website/src/app/consulting/page.tsx\")",
+      "Bash(sed -n '170,172p' \"/Users/nmh/Desktop/Claude Code x Antigravity/Website/src/app/transformation-coach/page.tsx\")",
+      "Bash(sed -i '' 's/, Building2//' src/app/agile-ausbildungen/okr-coach/page.tsx)",
+      "Bash(sed -i '' 's/DAY_BADGES.map\\(\\(badge, i\\) =>/DAY_BADGES.map\\(\\(badge\\) =>/' src/app/agile-ausbildungen/veraenderung-gestalten/page.tsx)",
+      "Bash(sed -n '377,379p' src/app/ausbildungen/ai-sprint-v2/page.tsx)",
+      "Bash(sed -i '' 's/{TIMELINE_STEPS.map\\(\\(s, i\\) => \\(/{TIMELINE_STEPS.map\\(\\(s\\) => \\(/' src/app/ausbildungen/ai-sprint-v2/page.tsx)",
+      "Bash(sed -i '' \"s/import { ArrowRight, BookOpen, FileText, ExternalLink }/import { BookOpen, FileText, ExternalLink }/\" src/app/veroeffentlichungen/page.tsx)",
+      "Bash(sed -i '' \"s/import { useState, useEffect, useRef } from \\\\\"react\\\\\";/import { useState, useEffect } from \\\\\"react\\\\\";/\" src/components/ui/StickyCourseCTA.tsx)",
+      "Bash(sed -i '' 's/{BOOKS.map\\(\\(book, i\\) => \\(/{BOOKS.map\\(\\(book\\) => \\(/' src/components/sections/BuecherSection.tsx)",
+      "Bash(sed -i '' 's/{TIMELINE_STEPS.map\\(\\(s\\) => \\(/{TIMELINE_STEPS.map\\(\\(s, i\\) => \\(/' src/app/ausbildungen/ai-sprint-v2/page.tsx)",
+      "Bash(sed -n '443,475p' src/app/ausbildungen/ai-sprint-v2/page.tsx)"
     ]
   }
 }

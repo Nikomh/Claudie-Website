@@ -168,7 +168,7 @@ export default function TransformationCoachPage() {
                   Transformation Coaches gestalten Veränderung nicht, indem sie Lösungen vorgeben. Sie bringen die richtige Haltung mit: klare Präsenz, systemisches Verständnis und die Fähigkeit, Spannungen sichtbar zu machen.
                 </p>
                 <blockquote className="mt-1 rounded-[var(--radius-md)] border-l-4 border-tuerkis bg-bg-section px-5 py-4 text-sm italic leading-relaxed text-anthrazit-80">
-                  „Organisationen bekommen nicht die Kultur, die sie sich wünschen, sondern die Kultur, die ihre Strukturen erzwingen."
+                  &bdquo;Organisationen bekommen nicht die Kultur, die sie sich wünschen, sondern die Kultur, die ihre Strukturen erzwingen.&ldquo;
                 </blockquote>
               </div>
               <Reveal delay={150}>

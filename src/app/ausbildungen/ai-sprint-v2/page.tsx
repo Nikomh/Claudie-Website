@@ -375,7 +375,7 @@ export default function AISprintV2Page() {
                   className="absolute left-[10%] right-[10%] top-[28px] h-px bg-tuerkis/20"
                 />
 
-                {TIMELINE_STEPS.map((s, i) => (
+                {TIMELINE_STEPS.map((s, _i) => (
                   <div key={s.id} className="relative flex flex-col items-center gap-3 text-center">
                     {/* Node */}
                     <div
