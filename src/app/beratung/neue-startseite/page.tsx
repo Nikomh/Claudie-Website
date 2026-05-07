@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, Sparkles, Target, Users, Zap } from "lucide-react";
 import { BusinessAgilityScan } from "@/components/scan/BusinessAgilityScan";
+import { InlineBusinessAgilityScan } from "@/components/scan/InlineBusinessAgilityScan";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal } from "@/components/ui/Reveal";
@@ -194,36 +195,10 @@ export default function NeueStartseitePage() {
         </Container>
       </div>
 
-      {/* SCAN — EXECUTIVE ENTRY POINT */}
-      <div className="bg-tuerkis py-14">
+      {/* INLINE BUSINESS AGILITY SCAN */}
+      <div className="border-y border-border bg-white py-16 md:py-20">
         <Container>
-          <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
-            <div className="flex flex-col gap-3">
-              <div className="inline-flex items-center gap-2 self-start rounded-full bg-white/20 px-3 py-1">
-                <Sparkles className="h-3.5 w-3.5 text-white" aria-hidden />
-                <span className="text-xs font-bold uppercase tracking-widest text-white/90">Strategischer Einstieg</span>
-              </div>
-              <h2 className="text-2xl font-bold text-white md:text-3xl">Business Agility Scan</h2>
-              <p className="max-w-[52ch] text-sm leading-relaxed text-white/80 md:text-base">
-                In 2–4 Wochen: Klares Bild des Agilitätsgrades, eine KI-Ära-Transformationskarte, die wichtigsten Reibungspunkte und ein priorisertes Interventions-Portfolio. Der strategische Einstieg für Entscheider:innen.
-              </p>
-              <ul className="mt-1 flex flex-col gap-1.5">
-                {[
-                  "Business-Agility-Reifegrad-Snapshot",
-                  "KI-Ära-Transformationschancen-Karte",
-                  "Empfohlene Lern- und Transformations-Roadmap",
-                ].map((item) => (
-                  <li key={item} className="flex items-center gap-2 text-sm text-white/90">
-                    <CheckCircle2 className="h-4 w-4 shrink-0 text-white" aria-hidden />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="shrink-0">
-              <BusinessAgilityScan label="Scan starten" variant="white" />
-            </div>
-          </div>
+          <InlineBusinessAgilityScan />
         </Container>
       </div>
 
