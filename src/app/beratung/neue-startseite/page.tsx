@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, Sparkles, Target, Users, Zap } from "lucide-react";
+import { BusinessAgilityScan } from "@/components/scan/BusinessAgilityScan";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal } from "@/components/ui/Reveal";
@@ -27,7 +28,7 @@ const PILLARS = [
       "Designing Change In The AI Era",
       "Agile Leadership Certificate",
     ],
-    href: "/beratung/fuehrungskraefteentwicklung",
+    href: "/beratung/neue-startseite/adaptive-fuehrung",
     image: "/images/agile-fuehrung/ausbildung_consulting_agile_fuehrung_claudia_thonet_agile_consulting_icon_transparent_schrift_02_2023.png",
   },
   {
@@ -41,7 +42,7 @@ const PILLARS = [
       "Agile Coach Certificate",
       "Agile Facilitator Certificate",
     ],
-    href: "/beratung/agile-transformation",
+    href: "/beratung/neue-startseite/transformation-facilitation",
     image: "/images/icons/agile-teams-agile-teamentwicklung-claudia-thonet-coaching-training-icon-transparent.png",
   },
   {
@@ -55,7 +56,7 @@ const PILLARS = [
       "Hybrid Delivery In The AI Era",
       "OKR & Outcome Coach Certificate",
     ],
-    href: "/beratung/okr-einfuehrung",
+    href: "/beratung/neue-startseite/outcome-agilitaet",
     image: "/images/agile-organisationsentwicklung/Consulting_Inhouse_Agile_Organisationsentwicklung_Claudia_Thonet.png",
   },
 ];
@@ -138,12 +139,7 @@ export default function NeueStartseitePage() {
             </Reveal>
 
             <Reveal delay={340} className="flex flex-wrap gap-3 pt-1">
-              <Link
-                href="/kontakt"
-                className="inline-flex h-12 items-center gap-2 rounded-[var(--radius-md)] bg-tuerkis px-6 text-sm font-semibold text-white shadow-md transition-all hover:bg-tuerkis-80"
-              >
-                Business Agility Scan anfragen <ArrowRight className="h-4 w-4" aria-hidden />
-              </Link>
+              <BusinessAgilityScan label="Business Agility Scan starten" variant="primary" />
               <Link
                 href="#drei-saeulen"
                 className="inline-flex h-12 items-center gap-2 rounded-[var(--radius-md)] border border-white/25 px-6 text-sm font-semibold text-white/80 transition-all hover:border-white/50 hover:text-white"
@@ -225,12 +221,7 @@ export default function NeueStartseitePage() {
               </ul>
             </div>
             <div className="shrink-0">
-              <Link
-                href="/kontakt"
-                className="inline-flex h-12 items-center gap-2 rounded-[var(--radius-md)] bg-white px-6 text-sm font-semibold text-tuerkis shadow-md transition-all hover:-translate-y-0.5 hover:shadow-lg"
-              >
-                Scan anfragen <ArrowRight className="h-4 w-4" aria-hidden />
-              </Link>
+              <BusinessAgilityScan label="Scan starten" variant="white" />
             </div>
           </div>
         </Container>
