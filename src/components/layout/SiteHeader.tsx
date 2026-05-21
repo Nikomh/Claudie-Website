@@ -15,6 +15,7 @@ import { cn } from "@/lib/cn";
 
 const beratungLinks = [
   { title: "✦ Neue Positionierung (Konzept)", description: "KI-Ära Business Agility — neue Startseite im Preview.", href: "/beratung/neue-startseite" },
+  { title: "AI Sparring für Coaches", description: "KI-Masterclass für Coaching, OE & Transformation. 2 halbe Tage, online live.", href: "/beratung/ai-sparring-fuer-coaches" },
   { title: "Agile Organisationsentwicklung", description: "Strukturen und Kulturen iterativ weiterentwickeln.", href: "/beratung/agile-organisationsentwicklung" },
   { title: "Agile Transformation", description: "Agile Arbeitsweisen pragmatisch einführen und verankern.", href: "/beratung/agile-transformation" },
   { title: "Teamentwicklung", description: "Zusammenarbeit stärken, Rollen klären, Selbstorganisation fördern.", href: "/beratung/teamentwicklung" },
