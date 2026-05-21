@@ -99,7 +99,7 @@ const coachFramework = [
     letter: "C",
     word: "Constraints",
     note: "",
-    body: "Ethik, Datenschutz, Coaching-Haltung: keine Diagnose, mehrere Perspektiven, „Ich weiß es nicht" ist erlaubt.",
+    body: 'Ethik, Datenschutz, Coaching-Haltung: keine Diagnose, mehrere Perspektiven, „Ich weiß es nicht“ ist erlaubt.',
   },
   {
     letter: "H",
@@ -120,7 +120,7 @@ const halbtag1 = [
     code: "1.2",
     title: "KI verstehen & Rolle klären",
     duration: "45 Min",
-    body: "Wie LLMs „denken" – ohne Tech-Overload. Rollenmatrix: Was ist KI für Coaches, was darf sie nicht sein.",
+    body: 'Wie LLMs „denken" – ohne Tech-Overload. Rollenmatrix: Was ist KI für Coaches, was darf sie nicht sein.',
   },
   {
     code: "1.3",
@@ -132,7 +132,7 @@ const halbtag1 = [
     code: "1.4",
     title: "Das COACH-Framework + erste Anwendung",
     duration: "60 Min",
-    body: "Framework-Einführung, Live-Demo „schwacher Prompt → starker Prompt", Pair-Prompting an einem anonymisierten Mini-Fall.",
+    body: 'Framework-Einführung, Live-Demo „schwacher Prompt → starker Prompt", Pair-Prompting an einem anonymisierten Mini-Fall.',
   },
   {
     code: "1.5",
@@ -153,7 +153,7 @@ const halbtag2 = [
     code: "2.2",
     title: "Hypothesen & Reflexionsfragen mit KI",
     duration: "70 Min",
-    body: "Der wirksamste Coach-Use-Case in Tiefe: Hypothesenlandkarte erstellen, Reflexionsfragen schärfen, KI als „4. Stuhl" – inklusive klarer Grenzen.",
+    body: 'Der wirksamste Coach-Use-Case in Tiefe: Hypothesenlandkarte erstellen, Reflexionsfragen schärfen, KI als „4. Stuhl" – inklusive klarer Grenzen.',
   },
   {
     code: "2.3",
@@ -369,7 +369,7 @@ export default function AiSparringPage() {
                 {[
                   "Was darf ich überhaupt in ein KI-Tool eingeben, ohne die Vertraulichkeit meiner Klient:innen zu verletzen?",
                   "Wie nutze ich KI so, dass sie meine Coaching-Qualität erhöht – statt sie zu verwässern?",
-                  "Wo ist die Grenze zwischen „nützlichem Sparring" und „Pseudo-Diagnostik"?",
+                  'Wo ist die Grenze zwischen „nützlichem Sparring" und „Pseudo-Diagnostik"?',
                   "Wie spreche ich mit Auftraggeber:innen über meine KI-Nutzung – professionell, nicht abwehrend?",
                   "Wie erfülle ich die AI-Literacy-Pflicht aus dem EU AI Act, ohne zwei Tage Compliance-Folien durchzulesen?",
                 ].map((q) => (
@@ -710,7 +710,7 @@ export default function AiSparringPage() {
                 {
                   number: "03",
                   title: "Kritisch statt konsumierend",
-                  body: "Sie üben, KI-Output professionell zu hinterfragen. Wir nennen das „Red Teaming". Es ist der Unterschied zwischen Coach und Konsument.",
+                  body: 'Sie üben, KI-Output professionell zu hinterfragen. Wir nennen das „Red Teaming". Es ist der Unterschied zwischen Coach und Konsument.',
                 },
               ].map((item, i) => (
                 <Reveal key={item.number} delay={i * 80}>
@@ -731,7 +731,7 @@ export default function AiSparringPage() {
                     "Keine 60-Folien-Frontalvorträge.",
                     "Keine Tool-Demo-Shows ohne Anwendung.",
                     "Keine generischen Prompt-Sammlungen aus dem Internet.",
-                    "Kein „KI wird Coaching revolutionieren"-Hype.",
+                    'Kein „KI wird Coaching revolutionieren"-Hype.',
                     "Kein klassisches Webinar ohne echte Interaktion.",
                   ].map((item) => (
                     <li key={item} className="flex items-center gap-2 text-sm text-anthrazit-80">
