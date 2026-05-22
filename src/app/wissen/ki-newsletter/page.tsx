@@ -38,7 +38,7 @@ export default function KiNewsletterPage() {
       </div>
 
       <Reveal>
-        <Section bg="white">
+        <Section bg="default">
           <Container className="max-w-4xl">
             <div className="relative overflow-hidden rounded-[var(--radius-lg)] border border-tuerkis/20 bg-tuerkis/5 p-8 md:p-12">
               <div className="relative z-10 grid gap-8 md:grid-cols-2 md:items-center">
@@ -66,7 +66,7 @@ export default function KiNewsletterPage() {
                 <div className="rounded-[var(--radius-lg)] border border-border bg-white p-6 shadow-sm">
                   <h3 className="mb-4 text-base font-semibold text-anthrazit">Jetzt kostenlos eintragen:</h3>
                   {/* Dies ist aktuell eine Dummy-Form für das UI-Konzept. Das onSubmit muss mit eurem Newsletter-Tool verbunden werden. */}
-                  <form className="flex flex-col gap-3" onSubmit={(e) => e.preventDefault()}>
+                  <form className="flex flex-col gap-3" action="/newsletter" method="get">
                     <div>
                       <label htmlFor="newsletter-email" className="sr-only">E-Mail Adresse</label>
                       <input
