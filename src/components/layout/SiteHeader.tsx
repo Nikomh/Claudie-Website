@@ -51,6 +51,7 @@ const wissenLinks = [
   { title: "YouTube-Videos", description: "Webinare und Erklärvideos.", href: "/youtube-videos" },
   { title: "Downloads", description: "Templates, Canvases, Leitfäden.", href: "/downloadbereich" },
   { title: "Newsletter", description: "Alle 4 Wochen — plus gratis E-Book.", href: "/newsletter" },
+  { title: "KI-Newsletter", description: "Prompt & Praxis für Coaches.", href: "/wissen/ki-newsletter" },
 ];
 
 // ── Shared dropdown link component ────────────────────────────────
