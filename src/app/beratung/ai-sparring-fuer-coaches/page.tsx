@@ -11,7 +11,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 export const metadata: Metadata = {
   title: "AI Sparring für Coaches – KI-Masterclass für Coaching, OE & Transformation",
   description:
-    "Zwei halbe Tage, in denen Sie KI verantwortungsvoll in Ihre Coaching- und OE-Praxis integrieren. Eigenes Prompting-Framework, sichere Anwendung, DSGVO- und AI-Act-konform. Für agile Coaches, Transformation Coaches, OE-Profis und L&D.",
+    "Zwei halbe Tage, in denen du KI verantwortungsvoll in deine Coaching- und OE-Praxis integrierst. Eigenes Prompting-Framework, sichere Anwendung, DSGVO- und AI-Act-konform. Für agile Coaches, Transformation Coaches, OE-Profis und L&D.",
   alternates: { canonical: "/beratung/ai-sparring-fuer-coaches/" },
   openGraph: {
     title: "AI Sparring für Coaches – KI-Masterclass",
@@ -33,11 +33,11 @@ const outcomes = [
   },
   {
     title: "Mindestens drei eigene Coach-Prompts",
-    body: "Erprobt an Ihren anonymisierten realen Fällen. Direkt produktiv einsetzbar.",
+    body: "Erprobt an deinen anonymisierten realen Fällen. Direkt produktiv einsetzbar.",
   },
   {
     title: "Ein persönliches Use-Case-Canvas",
-    body: "Mit Ihrem ersten wiederverwendbaren KI-Workflow für Ihre Coaching- oder OE-Praxis.",
+    body: "Mit deinem ersten wiederverwendbaren KI-Workflow für deine Coaching- oder OE-Praxis.",
   },
   {
     title: "30-Tage-Transferplan + Begleitung",
@@ -45,34 +45,34 @@ const outcomes = [
   },
   {
     title: "Teilnahmebescheinigung mit AI-Literacy-Bezug",
-    body: "Nachweisbar für Ihre eigene Compliance und für Auftraggeber, die AI-Literacy nach EU AI Act Art. 4 einfordern.",
+    body: "Nachweisbar für deine eigene Compliance und für Auftraggeber, die AI-Literacy nach EU AI Act Art. 4 einfordern.",
   },
 ];
 
 const audiences = [
   {
     title: "Agile Coaches & Transformation Coaches",
-    body: "Sie begleiten Teams und Organisationen durch Veränderung. KI könnte Ihr Vorbereitungs- und Diagnose-Tempo verdoppeln – wenn Sie die Spielregeln kennen.",
+    body: "Du begleitest Teams und Organisationen durch Veränderung. KI könnte dein Vorbereitungs- und Diagnose-Tempo verdoppeln – wenn du die Spielregeln kennst.",
   },
   {
     title: "Organisationsentwickler:innen",
-    body: "Sie designen Interventionen, analysieren Stakeholder, denken Systeme. KI als Sparringspartner schärft Ihre Hypothesen und Ihr Workshopdesign.",
+    body: "Du designst Interventionen, analysierst Stakeholder, denkst in Systemen. KI als Sparringspartner schärft deine Hypothesen und dein Workshopdesign.",
   },
   {
     title: "Interne Coaches in Unternehmen",
-    body: "Sie agieren zwischen Auftraggeber-Compliance und Coaching-Vertraulichkeit. Sie brauchen klare Regeln, um handlungsfähig zu bleiben.",
+    body: "Du agierst zwischen Auftraggeber-Compliance und Coaching-Vertraulichkeit. Du brauchst klare Regeln, um handlungsfähig zu bleiben.",
   },
   {
     title: "Scrum Master & Agile Master",
-    body: "Sie wechseln zwischen Methoden- und Beziehungsarbeit. KI kann Sie in beidem unterstützen – wenn Sie wissen, wie.",
+    body: "Du wechselst zwischen Methoden- und Beziehungsarbeit. KI kann dich in beidem unterstützen – wenn du weißt, wie.",
   },
   {
     title: "Trainer:innen & Facilitator:innen",
-    body: "Sie gestalten Lernräume und Workshops. KI verkürzt Ihren Design-Prozess deutlich – ohne dass Ihr Format austauschbar wird.",
+    body: "Du gestaltest Lernräume und Workshops. KI verkürzt deinen Design-Prozess deutlich – ohne dass dein Format austauschbar wird.",
   },
   {
     title: "L&D, People & Culture, HR",
-    body: "Sie verantworten Programme und Coaching-Pools. Sie brauchen ein skalierbares, AI-Act-konformes Format für Ihre Coaches.",
+    body: "Du verantwortest Programme und Coaching-Pools. Du brauchst ein skalierbares, AI-Act-konformes Format für deine Coaches.",
   },
 ];
 
@@ -165,7 +165,7 @@ const halbtag2 = [
     code: "2.4",
     title: "Mein Coach-Workflow",
     duration: "50 Min",
-    body: "Use-Case-Canvas: Ihr persönlicher wiederverwendbarer Workflow, mit Peer-Sparring.",
+    body: "Use-Case-Canvas: Dein persönlicher wiederverwendbarer Workflow, mit Peer-Sparring.",
   },
   {
     code: "2.5",
@@ -194,7 +194,7 @@ const securityFeatures = [
   },
   {
     title: "Klare No-Gos",
-    body: "Was Sie nie ungeprüft mit KI machen sollten. Inklusive sicherer Alternativen.",
+    body: "Was du nie ungeprüft mit KI machen solltest. Inklusive sicherer Alternativen.",
   },
 ];
 
@@ -202,12 +202,12 @@ const faqItems = [
   {
     question: "Brauche ich Vorerfahrung mit KI?",
     answer:
-      "Sie sollten mindestens einmal mit ChatGPT, Claude oder einem vergleichbaren Tool gearbeitet haben. Wir setzen Grundbedienung voraus – wir trainieren keine UI. Wenn Sie noch nie ein KI-Tool benutzt haben, empfehlen wir, vorher ein bis zwei Stunden zu experimentieren.",
+      "Du solltest mindestens einmal mit ChatGPT, Claude oder einem vergleichbaren Tool gearbeitet haben. Wir setzen Grundbedienung voraus – wir trainieren keine UI. Wenn du noch nie ein KI-Tool benutzt hast, empfehlen wir, vorher ein bis zwei Stunden zu experimentieren.",
   },
   {
     question: "Welche KI-Tools brauche ich konkret?",
     answer:
-      "Wir empfehlen einen Zugang zu einer Enterprise- oder Pro-Version (z.B. ChatGPT Plus/Business, Claude Pro, Microsoft Copilot Business). Kostenfreie Consumer-Versionen sind datenschutzrechtlich für Coaching-Arbeit ungeeignet. Vor Beginn erhalten Sie eine kurze Setup-Empfehlung.",
+      "Wir empfehlen einen Zugang zu einer Enterprise- oder Pro-Version (z.B. ChatGPT Plus/Business, Claude Pro, Microsoft Copilot Business). Kostenfreie Consumer-Versionen sind datenschutzrechtlich für Coaching-Arbeit ungeeignet. Vor Beginn erhältst du eine kurze Setup-Empfehlung.",
   },
   {
     question: "Ist das eine Rechtsberatung zu DSGVO und EU AI Act?",
@@ -217,7 +217,7 @@ const faqItems = [
   {
     question: "Erhalte ich einen formalen Nachweis?",
     answer:
-      "Ja. Sie erhalten eine Teilnahmebescheinigung mit explizitem AI-Literacy-Bezug zu Art. 4 EU AI Act. Diesen Nachweis können Sie gegenüber Auftraggeber:innen einsetzen, sofern diese AI-Literacy nachweisen müssen.",
+      "Ja. Du erhältst eine Teilnahmebescheinigung mit explizitem AI-Literacy-Bezug zu Art. 4 EU AI Act. Diesen Nachweis kannst du gegenüber Auftraggeber:innen einsetzen, sofern diese AI-Literacy nachweisen müssen.",
   },
   {
     question: "Wie viele Teilnehmende sind in einem Durchgang?",
@@ -232,7 +232,7 @@ const faqItems = [
   {
     question: "Können wir das Format inhouse buchen?",
     answer:
-      "Ja. Wir passen Inhalte, Use Cases und Datenschutz-Module an Ihre Organisation, Branche und vorhandene Tool-Landschaft an. Das Inhouse-Format führen wir bewusst 100 % online live durch. Mindestgruppengröße 8 Personen. Anfrage über das Kontaktformular.",
+      "Ja. Wir passen Inhalte, Use Cases und Datenschutz-Module an deine Organisation, Branche und vorhandene Tool-Landschaft an. Das Inhouse-Format führen wir bewusst 100 % online live durch. Mindestgruppengröße 8 Personen. Anfrage über das Kontaktformular.",
   },
   {
     question: "Was unterscheidet diese Masterclass von einem normalen Prompting-Workshop?",
@@ -245,7 +245,7 @@ const faqItems = [
       "Mindestens 70 % Anwendung, Reflexion und Peer-Austausch. Maximal 30 % Input. Wir trainieren nicht in Folien.",
   },
   {
-    question: "Warum bieten Sie keine Präsenzformate an?",
+    question: "Warum bietet ihr keine Präsenzformate an?",
     answer:
       "Bewusste Entscheidung. KI-Tools nutzen Coaches in ihrem digitalen Arbeitsumfeld – nicht im Seminarraum. Das Online-Format trainiert genau dort, wo die Anwendung später stattfindet. Es ermöglicht kleinere Gruppen, niedrigere Kosten und Teilnahme aus dem gesamten DACH-Raum.",
   },
@@ -254,15 +254,15 @@ const faqItems = [
 const upsells = [
   {
     title: "KI-Praxislabor für Coaches",
-    body: "5 Wochen, hybrid. Sie verankern Ihre Workflows mit Peer-Pods und Experten-Slots. Für Alumni der Masterclass.",
+    body: "5 Wochen, hybrid. Du verankerst deine Workflows mit Peer-Pods und Experten-Slots. Für Alumni der Masterclass.",
   },
   {
     title: "AI Literacy Inhouse",
-    body: "Skalierbares Programm für Ihren gesamten Coaching-Pool oder Ihre L&D-Funktion. AI-Act-konform, modular aufgebaut.",
+    body: "Skalierbares Programm für deinen gesamten Coaching-Pool oder deine L&D-Funktion. AI-Act-konform, modular aufgebaut.",
   },
   {
     title: "KI-Governance-Starter für HR & L&D",
-    body: "Sichere Policy, Toolauswahl, Vertragsbausteine für Ihre Coaching- und Beratungsleistungen.",
+    body: "Sichere Policy, Toolauswahl, Vertragsbausteine für deine Coaching- und Beratungsleistungen.",
   },
 ];
 
@@ -295,7 +295,7 @@ export default function AiSparringPage() {
               </div>
             </Reveal>
 
-            <h1 className="text-4xl font-semibold leading-[1.08] tracking-tight text-white md:text-5xl xl:text-6xl">
+            <h1 className="text-3xl sm:text-4xl font-semibold leading-[1.08] tracking-tight text-white md:text-5xl xl:text-6xl">
               <Reveal as="span" className="block">
                 AI Sparring für Coaches
               </Reveal>
@@ -310,22 +310,22 @@ export default function AiSparringPage() {
             <Reveal delay={240}>
               <p className="max-w-[54ch] text-base leading-relaxed text-white/60">
                 KI verändert Coaching, Organisationsentwicklung und Transformation – nicht durch Ersatz,
-                sondern durch eine neue Form der Partnerschaft. In zwei halben Tagen entwickeln Sie eine
+                sondern durch eine neue Form der Partnerschaft. In zwei halben Tagen entwickelst du eine
                 fundierte eigene Haltung, ein Prompting-Framework speziell für Coaches und konkrete
-                Workflows, die ab Tag drei in Ihrer Praxis greifen. Sicher. AI-Act-konform. Ohne Hype.
+                Workflows, die ab Tag drei in deiner Praxis greifen. Sicher. AI-Act-konform. Ohne Hype.
               </p>
             </Reveal>
 
             <Reveal delay={320} className="flex flex-wrap gap-3 pt-1">
               <Link
                 href="#pricing"
-                className="inline-flex h-12 items-center gap-2 rounded-[var(--radius-md)] bg-tuerkis px-6 text-sm font-semibold text-white shadow-md transition-all hover:bg-tuerkis-80"
+                className="inline-flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-[var(--radius-md)] bg-tuerkis px-6 text-sm font-semibold text-white shadow-md transition-all hover:bg-tuerkis-80"
               >
                 Jetzt Platz sichern <ArrowRight className="h-4 w-4" aria-hidden />
               </Link>
               <Link
                 href="/kontakt"
-                className="inline-flex h-12 items-center gap-2 rounded-[var(--radius-md)] border border-white/25 px-6 text-sm font-semibold text-white/80 transition-all hover:border-white/50 hover:text-white"
+                className="inline-flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-[var(--radius-md)] border border-white/25 px-6 text-sm font-semibold text-white/80 transition-all hover:border-white/50 hover:text-white"
               >
                 Programm anfragen
               </Link>
@@ -333,12 +333,12 @@ export default function AiSparringPage() {
 
             {/* Trust bar */}
             <Reveal delay={420}>
-              <div className="mt-2 flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-white/10 pt-5">
+              <div className="mt-2 flex flex-wrap items-center gap-x-5 gap-y-3 border-t border-white/10 pt-5">
                 {[
                   "100 % live online im gesamten DACH-Raum",
                   "Teilnahmebescheinigung mit AI-Literacy-Bezug (EU AI Act Art. 4)",
                   "Coach-natives Prompting-Framework",
-                  "Arbeit an Ihren eigenen anonymisierten Fällen",
+                  "Arbeit an deinen eigenen anonymisierten Fällen",
                 ].map((item) => (
                   <span
                     key={item}
@@ -358,12 +358,12 @@ export default function AiSparringPage() {
       <Reveal>
         <Section>
           <Container className="max-w-3xl">
-            <SectionHeading title="Sie kennen das vermutlich." />
+            <SectionHeading title="Du kennst das vermutlich." />
             <div className="mt-6 text-base leading-relaxed text-anthrazit-80">
               <p className="mb-5">
-                Ihre Kund:innen fragen Sie nach KI. Ihr LinkedIn-Feed quillt über mit Prompt-Tricks.
-                Ihre Kolleg:innen probieren ChatGPT in ihrer Coaching-Vorbereitung – ohne klare Regeln.
-                Und Sie selbst stehen vor Fragen, die kein Tutorial beantwortet:
+                Deine Kund:innen fragen dich nach KI. Dein LinkedIn-Feed quillt über mit Prompt-Tricks.
+                Deine Kolleg:innen probieren ChatGPT in ihrer Coaching-Vorbereitung – ohne klare Regeln.
+                Und du selbst stehst vor Fragen, die kein Tutorial beantwortet:
               </p>
               <ul className="flex flex-col gap-3">
                 {[
@@ -414,16 +414,16 @@ export default function AiSparringPage() {
                 <div className="flex items-center gap-2">
                   <div className="h-2 w-2 rounded-full bg-tuerkis" aria-hidden />
                   <h3 className="text-sm font-bold uppercase tracking-[0.1em] text-tuerkis">
-                    Was Sie hier bekommen
+                    Was du hier bekommst
                   </h3>
                 </div>
                 <ul className="flex flex-col gap-3">
                   {[
                     "Ein Prompting-Framework, das aus Coaching-Logik abgeleitet ist – nicht aus Marketing-Methodik.",
                     "Sichere, anwendungsreife Routinen für DSGVO, AI Act und Coaching-Ethik.",
-                    "Live-Hypothesenarbeit mit kritischer Output-Prüfung an Ihren eigenen anonymisierten Fällen.",
+                    "Live-Hypothesenarbeit mit kritischer Output-Prüfung an deinen eigenen anonymisierten Fällen.",
                     "Konkrete Workflows, die ab Tag drei spürbar Zeit sparen und Qualität erhöhen.",
-                    "Eine professionelle Sprache, um mit Ihren Kund:innen über KI zu sprechen.",
+                    "Eine professionelle Sprache, um mit deinen Kund:innen über KI zu sprechen.",
                   ].map((item) => (
                     <li key={item} className="flex gap-2.5 text-sm text-anthrazit-80">
                       <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-tuerkis" aria-hidden />
@@ -447,7 +447,7 @@ export default function AiSparringPage() {
                     "Kein Custom-GPT- oder Agenten-Bau.",
                     "Keine Marketing- oder LinkedIn-KI-Schulung.",
                     "Keine Rechtsberatung – wir geben Orientierung, keine juristische Sicherheit.",
-                    "Kein Versprechen, dass KI Sie zum besseren Coach macht. Sie macht nur schneller und klarer, was Sie schon sind.",
+                    "Kein Versprechen, dass KI dich zum besseren Coach macht. Sie macht nur schneller und klarer, was du schon bist.",
                   ].map((item) => (
                     <li key={item} className="flex gap-2.5 text-sm text-anthrazit-80">
                       <span className="mt-0.5 h-4 w-4 shrink-0 rounded-full bg-bg-section text-center text-[10px] leading-4 text-anthrazit-80" aria-hidden>
@@ -470,7 +470,7 @@ export default function AiSparringPage() {
             <SectionHeading
               eyebrow="Zielgruppe"
               title="Für Coaches, die professionell mit KI arbeiten wollen – ohne Naivität."
-              lead="Diese Masterclass passt zu Ihnen, wenn Sie in einer der folgenden Rollen arbeiten und mindestens einmal mit ChatGPT, Claude oder Copilot etwas Sinnvolles versucht haben."
+              lead="Diese Masterclass passt zu dir, wenn du in einer der folgenden Rollen arbeitest und mindestens einmal mit ChatGPT, Claude oder Copilot etwas Sinnvolles versucht hast."
             />
             <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {audiences.map((card, i) => (
@@ -487,7 +487,7 @@ export default function AiSparringPage() {
             {/* Prerequisites */}
             <Reveal delay={200}>
               <div className="mt-8 rounded-[var(--radius-md)] border border-border bg-bg-section p-5">
-                <p className="mb-3 text-sm font-semibold text-anthrazit">Was Sie mitbringen sollten:</p>
+                <p className="mb-3 text-sm font-semibold text-anthrazit">Was du mitbringen solltest:</p>
                 <ul className="grid gap-2 sm:grid-cols-2">
                   {[
                     "Aktive Coaching-, OE- oder Trainingspraxis",
@@ -513,8 +513,8 @@ export default function AiSparringPage() {
           <Container>
             <SectionHeading
               eyebrow="Ergebnisse"
-              title="Was Sie konkret mitnehmen."
-              lead="Keine 60-Slides-Foliensammlung. Sondern Artefakte, die Sie ab dem nächsten Tag verwenden können."
+              title="Was du konkret mitnimmst."
+              lead="Keine 60-Slides-Foliensammlung. Sondern Artefakte, die du ab dem nächsten Tag verwenden kannst."
             />
             <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {outcomes.map((item, i) => (
@@ -545,8 +545,8 @@ export default function AiSparringPage() {
                   lead="Generische Prompting-Frameworks sind für Marketing gebaut. Für Coaching reichen sie nicht. Wir haben ein Framework entwickelt, das Hypothesenarbeit, Mehrperspektivität, Ethik und Datenschutz von vornherein integriert."
                 />
                 <p className="text-sm leading-relaxed text-anthrazit-80">
-                  Das COACH-Framework ist der Kern dieser Masterclass. Sie üben es an Ihren eigenen Fällen
-                  – und nehmen den COACH-Spickzettel mit nach Hause.
+                  Das COACH-Framework ist der Kern dieser Masterclass. Du übst es an deinen eigenen Fällen
+                  – und nimmst den COACH-Spickzettel mit nach Hause.
                 </p>
                 <Link
                   href="#curriculum"
@@ -679,7 +679,7 @@ export default function AiSparringPage() {
                 <p className="text-sm leading-relaxed text-anthrazit-80">
                   <strong className="font-semibold text-anthrazit">Didaktik-Hinweis:</strong>{" "}
                   Maximal 30 % Input, mindestens 70 % Anwendung, Reflexion und Peer-Austausch. Wir
-                  trainieren nicht in Folien, sondern an Ihren Fällen.
+                  trainieren nicht in Folien, sondern an deinen Fällen.
                 </p>
               </div>
             </Reveal>
@@ -705,12 +705,12 @@ export default function AiSparringPage() {
                 {
                   number: "02",
                   title: "Eigene Fälle, sicher gemacht",
-                  body: "Sie arbeiten an Ihren eigenen, anonymisierten Anliegen. Das ist der einzige Weg, der echten Transfer ermöglicht – und genau die Datenschutz-Routine, die Sie auch im Alltag brauchen.",
+                  body: "Du arbeitest an deinen eigenen, anonymisierten Anliegen. Das ist der einzige Weg, der echten Transfer ermöglicht – und genau die Datenschutz-Routine, die du auch im Alltag brauchst.",
                 },
                 {
                   number: "03",
                   title: "Kritisch statt konsumierend",
-                  body: 'Sie üben, KI-Output professionell zu hinterfragen. Wir nennen das „Red Teaming". Es ist der Unterschied zwischen Coach und Konsument.',
+                  body: 'Du übst, KI-Output professionell zu hinterfragen. Wir nennen das „Red Teaming". Es ist der Unterschied zwischen Coach und Konsument.',
                 },
               ].map((item, i) => (
                 <Reveal key={item.number} delay={i * 80}>
@@ -725,7 +725,7 @@ export default function AiSparringPage() {
 
             <Reveal delay={200}>
               <div className="mt-10 rounded-[var(--radius-md)] border border-border bg-bg-section p-5">
-                <p className="mb-3 text-sm font-semibold text-anthrazit">Was Sie nicht erleben werden:</p>
+                <p className="mb-3 text-sm font-semibold text-anthrazit">Was du nicht erleben wirst:</p>
                 <ul className="grid gap-2 sm:grid-cols-2">
                   {[
                     "Keine 60-Folien-Frontalvorträge.",
@@ -755,7 +755,7 @@ export default function AiSparringPage() {
             <SectionHeading
               eyebrow="Datenschutz & Ethik"
               title="Datenschutz und Coaching-Ethik sind nicht ein Modul. Sie sind die Grundlage."
-              lead="Wir nehmen Vertraulichkeit ernst – weil Sie es tun. Deshalb ist das gesamte Format darauf ausgelegt, dass Sie nach der Masterclass mit gutem Gewissen mit KI arbeiten können."
+              lead="Wir nehmen Vertraulichkeit ernst – weil du es tust. Deshalb ist das gesamte Format darauf ausgelegt, dass du nach der Masterclass mit gutem Gewissen mit KI arbeiten kannst."
             />
             <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {securityFeatures.map((item, i) => (
@@ -787,7 +787,7 @@ export default function AiSparringPage() {
       <Reveal>
         <Section>
           <Container>
-            <SectionHeading eyebrow="Begleitung" title="Wer Sie begleitet." />
+            <SectionHeading eyebrow="Begleitung" title="Wer dich begleitet." />
             <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {[1, 2].map((i) => (
                 <div
@@ -945,7 +945,7 @@ export default function AiSparringPage() {
                   </div>
                   <p className="max-w-[52ch] text-sm leading-relaxed text-anthrazit-80">
                     Für Coaching-Pools, L&D-Teams und Organisationen. 100 % online live,
-                    plattformneutral, maßgeschneidert auf Ihre Organisation. 8–16 Teilnehmende pro
+                    plattformneutral, maßgeschneidert auf deine Organisation. 8–16 Teilnehmende pro
                     Durchgang. Inkl. Materialien-Lizenz für 12 Monate.
                   </p>
                   <div className="flex flex-wrap gap-3 pt-1 text-xs text-anthrazit-80">
@@ -1000,7 +1000,7 @@ export default function AiSparringPage() {
           <Container>
             <SectionHeading
               eyebrow="Nächste Schritte"
-              title="Wenn Sie tiefer gehen wollen."
+              title="Wenn du tiefer gehen willst."
               lead="Die Masterclass ist der Einstieg. Für viele Teilnehmende ist sie auch der Startpunkt einer längeren Lernreise."
             />
             <div className="mt-10 grid gap-4 sm:grid-cols-3">
@@ -1052,28 +1052,28 @@ export default function AiSparringPage() {
         <Container>
           <div className="flex flex-col items-center gap-6 text-center">
             <Eyebrow className="text-tuerkis-50">Nächster Schritt</Eyebrow>
-            <h2 className="max-w-[30ch] text-3xl font-bold leading-tight text-white md:text-4xl">
-              Bereit, KI in Ihre Coaching-Praxis zu integrieren – sicher und souverän?
+            <h2 className="max-w-[30ch] text-2xl sm:text-3xl font-bold leading-tight text-white md:text-4xl">
+              Bereit, KI in deine Coaching-Praxis zu integrieren – sicher und souverän?
             </h2>
             <p className="max-w-[48ch] text-sm leading-relaxed text-white/60 md:text-base">
               Zwei halbe Tage. Ein klares Framework. Ein 30-Tage-Transferpfad. Eine Haltung, die trägt.
             </p>
-            <div className="flex flex-wrap justify-center gap-3">
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 w-full sm:w-auto">
               <Link
                 href="#pricing"
-                className="inline-flex h-12 items-center gap-2 rounded-[var(--radius-md)] bg-tuerkis px-6 text-sm font-semibold text-white shadow-md transition-all hover:bg-tuerkis-80"
+                className="inline-flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-[var(--radius-md)] bg-tuerkis px-6 text-sm font-semibold text-white shadow-md transition-all hover:bg-tuerkis-80"
               >
                 Jetzt Platz sichern <ArrowRight className="h-4 w-4" aria-hidden />
               </Link>
               <Link
                 href="/kontakt"
-                className="inline-flex h-12 items-center gap-2 rounded-[var(--radius-md)] border border-white/25 px-6 text-sm font-semibold text-white/80 transition-all hover:border-white/50 hover:text-white"
+                className="inline-flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-[var(--radius-md)] border border-white/25 px-6 text-sm font-semibold text-white/80 transition-all hover:border-white/50 hover:text-white"
               >
                 Inhouse anfragen
               </Link>
             </div>
             <p className="text-xs text-white/40">
-              Wenn Sie unsicher sind, ob das Format zu Ihnen passt:{" "}
+              Wenn du unsicher bist, ob das Format zu dir passt:{" "}
               <Link href="/kontakt" className="underline hover:text-white/70">
                 Kostenloses 15-Min-Klärungsgespräch vereinbaren.
               </Link>
