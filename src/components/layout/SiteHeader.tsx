@@ -230,6 +230,7 @@ export function SiteHeader() {
                   { label: "Beratung", overview: "/beratung", items: beratungLinks },
                   { label: "Ausbildungen", overview: "/ausbildungen", items: ausbildungenLinks },
                   { label: "Masterclasses", overview: "/masterclasses", items: masterclassLinks },
+                  { label: "Wissen", overview: "/wissen", items: wissenLinks },
                 ].map((section) => (
                   <div key={section.label} className="mt-5">
                     <Link href={section.overview} className="flex items-center justify-between rounded-[var(--radius-md)] px-2 py-1 text-xs font-bold uppercase tracking-[0.12em] text-tuerkis hover:bg-bg-section">
@@ -246,7 +247,6 @@ export function SiteHeader() {
                 <div className="mt-5 border-t border-border pt-4">
                   {[
                     { label: "Webinare & Events", href: "/webinare" },
-                    { label: "Wissen & Ressourcen", href: "/wissen" },
                     { label: "Über uns", href: "/ueber-uns" },
                     { label: "Kontakt", href: "/kontakt" },
                   ].map((l) => (
