@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, Shield, Sparkles, Clock, Users, BookOpen, Zap } from "lucide-react";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
@@ -124,6 +125,17 @@ export default function KiNewsletterPage() {
                 </div>
               ))}
             </div>
+            <Reveal delay={120}>
+              <div className="mt-8 flex justify-center">
+                <Image
+                  src="/images/newsletter/warum-jetzt.png"
+                  alt="Infografik: Warum jetzt – EU AI Act, Auftraggeber erwarten KI-Haltung, Tools sind reif"
+                  width={600}
+                  height={450}
+                  className="w-full max-w-lg rounded-[var(--radius-lg)] border border-border shadow-sm"
+                />
+              </div>
+            </Reveal>
           </Container>
         </Section>
       </Reveal>
@@ -160,6 +172,17 @@ export default function KiNewsletterPage() {
                 </Reveal>
               ))}
             </div>
+            <Reveal delay={120}>
+              <div className="mt-8 flex justify-center">
+                <Image
+                  src="/images/newsletter/coach-framework.png"
+                  alt="COACH-Framework Infografik: Context, Outcome, Assumptions, Constraints, Human Review"
+                  width={600}
+                  height={450}
+                  className="w-full max-w-lg rounded-[var(--radius-lg)] border border-white/10 shadow-lg"
+                />
+              </div>
+            </Reveal>
           </Container>
         </Section>
       </Reveal>
