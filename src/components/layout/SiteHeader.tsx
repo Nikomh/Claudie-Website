@@ -27,6 +27,7 @@ const beratungLinks = [
 
 const ausbildungenLinks = [
   { title: "AI-Training: KI für Coaches", description: "2 halbe Tage online · KI sicher & reflektiert nutzen", href: "/ausbildungen/ki-fuer-coaches" },
+  { title: "\u2728 Neu: KI f\u00fcr Coaches \u2013 Ank\u00fcndigung", description: "Newsletter zum neuen AI-Training lesen.", href: "/ausbildungen/ki-fuer-coaches/newsletter" },
   { title: "Agile Coach Ausbildung", description: "BDVT-zertifiziert · 100+ Stunden · 5 Module", href: "/agile-ausbildungen/agiler-coach" },
   { title: "OKR Coach Ausbildung", description: "BDVT & ECA · 3 intensive Tage", href: "/agile-ausbildungen/okr-coach" },
   { title: "Agile Facilitator Ausbildung", description: "BDVT-zertifiziert · 50+ Stunden · 3 Module", href: "/agile-ausbildungen/agiler-facilitator" },
